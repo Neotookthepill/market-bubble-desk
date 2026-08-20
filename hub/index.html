@@ -69,7 +69,7 @@ body.loaded #splash{opacity:0;pointer-events:none;}
 *{box-sizing:border-box;margin:0;padding:0;}
 :where(button,a,input,[tabindex]):focus-visible{outline:2px solid var(--brass);outline-offset:3px;}
 body{color:var(--ink1);font-family:"Inter",system-ui,sans-serif;font-size:15px;line-height:1.58;-webkit-font-smoothing:antialiased;
-  background:radial-gradient(120% 80% at 70% -10%,rgba(203,162,77,.06),transparent 45%),linear-gradient(rgba(14,15,18,.82),rgba(12,13,16,.9)),var(--deskbg) 22% -8%/cover fixed no-repeat #101014;}
+  background:#101014;}
 a{color:inherit;}
 .col{max-width:1140px;margin:0 auto;padding:0 28px;}
 
@@ -131,7 +131,7 @@ body.on-home .tab.dupe{display:none;}
 /* Today + editorial search panel */
 /* fill first viewport: hero fills most, Today peeks at the bottom */
 #view-home{padding-bottom:0;}
-.desk{min-height:calc(100vh - 300px);align-content:center;}
+.desk{min-height:calc(100vh - 300px);align-content:center;position:relative;isolation:isolate;}
 .ed-searchwrap{position:relative;max-width:600px;}
 .ed-panel{position:absolute;top:calc(100% + 3px);left:0;right:0;z-index:30;border:1px solid var(--wline);background:#131209;border-radius:9px;overflow:hidden;box-shadow:0 26px 56px -26px rgba(0,0,0,.9);max-height:min(56vh,440px);overflow-y:auto;}
 .ed-panel-h{font-family:"JetBrains Mono";font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);padding:13px 16px 9px;}
@@ -821,11 +821,7 @@ body.on-home .desk-search{display:none}
   --wline2:#302e27;
 }
 body{
-  background:
-    radial-gradient(ellipse 72% 48% at 68% 18%,rgba(214,179,105,.14),transparent 64%),
-    radial-gradient(ellipse 55% 42% at 18% 56%,rgba(123,111,83,.09),transparent 72%),
-    linear-gradient(180deg,rgba(28,29,25,.53),rgba(20,21,19,.72)),
-    var(--deskbg) center top/cover fixed no-repeat #1a1b18;
+  background:#1a1b18;
 }
 .desk-masthead{background:rgba(15,16,13,.94)}
 .tabs{background:rgba(18,19,17,.93)}
@@ -861,7 +857,7 @@ body{
 .sheet.ledger-page::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;box-shadow:inset 0 0 18px rgba(77,57,31,.075),inset 0 1px rgba(255,255,255,.5);}
 .ledger-index{padding-top:38px;background-color:#e8e2d4;}
 .ledger-brandstamp{margin-bottom:15px;padding-bottom:13px;border-bottom:1px solid rgba(36,31,24,.28);}
-.ledger-brandstamp::after{content:"ARCHIVE · 013";font-size:6.5px;letter-spacing:.18em;}
+.ledger-brandstamp::after{content:attr(data-issue);font-size:6.5px;letter-spacing:.18em;}
 .ledger-kicker{border:0;margin-bottom:8px;padding:0;font-size:8px;letter-spacing:.2em;}
 .ledger-kicker span{margin-top:4px;max-width:18ch;line-height:1.45;}
 .ledger-menu{gap:0;border-top:1px solid rgba(31,29,25,.18);}
@@ -1113,7 +1109,7 @@ body.on-home .desk-search{display:flex}
   top:-28px;
   bottom:0;
   left:50%;
-  max-width:100%;width:100%;
+  width:100vw;
   transform:translateX(-50%);
   background:
     radial-gradient(ellipse 70% 62% at 72% 38%,rgba(207,169,91,.12),transparent 70%),
@@ -1125,7 +1121,7 @@ body.on-home .desk-search{display:flex}
   position:absolute;
   z-index:-1;
   inset:auto 50% 0;
-  max-width:100%;width:100%;
+  width:100vw;
   height:150px;
   transform:translateX(50%);
   background:linear-gradient(transparent,#1d1e1a);
@@ -1328,7 +1324,7 @@ body.on-home .desk-search{display:flex}
         <div class="ledger-shell">
           <div class="ledger-book">
             <section class="ledger-page ledger-index" aria-label="The Living Index">
-              <div class="ledger-brandstamp" aria-label="Market Bubble archive">
+              <div class="ledger-brandstamp" aria-label="Market Bubble archive" data-issue="ARCHIVE · 013">
                 <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20 22 H80 V70 H44 L33 82 L33 70 H20 Z"/>
                   <polyline points="23 52 33 60 43 47 53 54 62 41 90 12"/>
@@ -1531,7 +1527,7 @@ stories.forEach(function(s,i){var a=st[i];if(!a)return;a.href="https://youtu.be/
  var sg=a.querySelector(".story-copy strong");if(sg)sg.textContent=(s.insight||s.title)+".";
  var go=a.querySelector(".story-go");if(go)go.textContent=tsf(s.t)+" \u2197";});
 var MNU=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
-window.__FEAT={h:"Episode "+mx,sub:et,issue:"Issue "+String(mx).padStart(3,"0")+" \u00b7 "+(+d.slice(6,8))+" "+MN[(+d.slice(4,6))-1]+" "+d.slice(0,4),
+window.__FEAT={h:"Episode "+mx,sub:et,pad:String(mx).padStart(3,"0"),issue:"Issue "+String(mx).padStart(3,"0")+" \u00b7 "+(+d.slice(6,8))+" "+MN[(+d.slice(4,6))-1]+" "+d.slice(0,4),
  beats:stories.map(function(s){return (s.insight||s.title)+".";}),
  call:(function(){var ok=CALLS.filter(function(c){return c.d&&c.tick&&c.who&&c.who!=="UNRESOLVED";});
  var cnt={};ok.forEach(function(c){cnt[c.tick]=(cnt[c.tick]||0)+1;});
@@ -1539,7 +1535,9 @@ window.__FEAT={h:"Episode "+mx,sub:et,issue:"Issue "+String(mx).padStart(3,"0")+
  var dd=pool.sort(function(a,b){return a.d<b.d?1:(a.d>b.d?-1:(cnt[b.tick]-cnt[a.tick]||b.t-a.t));})[0];
  return dd?(dd.tick+" \u00b7 "+dd.who+" \u00b7 "+(dd.q||"").slice(0,46)+"\u2026 \u00b7 Ep "+dd.ep):null;})(),
  stamp:(stories.length+1)+" moments \u00b7 exact seconds"};
+var bs=document.querySelector(".ledger-brandstamp");if(bs)bs.setAttribute("data-issue","ARCHIVE \u00b7 "+__FEAT.pad);
 if(typeof DESK!=="undefined"&&DESK.today){DESK.today.h="Episode "+mx;DESK.today.sub=et;DESK.today.meta=M.length+" indexed moments";DESK.today.source="Episode "+mx+" \u00b7 "+M.length+" indexed moments";if(DESK.overview&&DESK.overview.index&&DESK.overview.index[3])DESK.overview.index[3][2]=(new Set(eps.map(function(x){return x.ep;})).size)+" on record";}
+ var bs=document.querySelector(".ledger-brandstamp");if(bs)bs.setAttribute("data-issue","ARCHIVE · "+__FEAT.pad);
 }catch(e){console.warn("featured builder",e);}})();
 document.querySelectorAll('.view:not(#view-home) .vhead').forEach(function(v){
  if(v.querySelector('.vback'))return;
@@ -1584,7 +1582,7 @@ const DIVIDERS=[["today","TODAY","Know what mattered"],["academy","LEARN","Under
 
 function sheetHTML(k){var d=DESK[k];
  const folio=`<div class="sheet-folio"><span>Market Bubble · The Desk</span><span>${(window.__FEAT&&__FEAT.issue)||"Issue 013 · 31 Jul 2026"}</span></div>`;
- const footer=(label,num,verified)=>`<div class="sheet-footer"><span>${esc(label)}</span>${verified?`<span class="source-stamp">Source verified</span>`:""}<span class="folio-no">013—${esc(num)}</span></div>`;
+ const footer=(label,num,verified)=>`<div class="sheet-footer"><span>${esc(label)}</span>${verified?`<span class="source-stamp">Source verified</span>`:""}<span class="folio-no">${(window.__FEAT&&__FEAT.pad)||"013"}—${esc(num)}</span></div>`;
  if(k==="overview"){return folio+`<div class="sheet-label">${d.label}</div><h2 class="sheet-h">${d.h}</h2><p class="sheet-body">${d.body}</p>`+
    `<div class="sheet-index">${d.index.map(x=>`<div><span class="ix">${x[0]}</span><span class="nm">${x[1]}</span><b>${x[2]}</b></div>`).join("")}</div>`+footer("Living index","00",false);}
  if(k==="today"){return folio+`<div class="sheet-label">${d.label}</div><h2 class="sheet-h">${(window.__FEAT&&__FEAT.h)||d.h}</h2><div class="sheet-sub">${esc((window.__FEAT&&__FEAT.sub)||d.sub)}</div>`+
