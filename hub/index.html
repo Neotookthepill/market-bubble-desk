@@ -30,15 +30,15 @@ html,body{overflow-x:hidden;max-width:100%;}
   @keyframes wstamp{to{opacity:1;transform:scale(1);filter:blur(0);}}
   @keyframes wsheen{from{background-position:-180% 0,0 0;}to{background-position:180% 0,0 0;}}
   .splash-sub{display:flex;align-items:center;gap:13px;font-family:"JetBrains Mono";font-size:11.5px;text-transform:uppercase;color:var(--muted);}
-  .splash-sub span{opacity:0;letter-spacing:.5em;transform:translateY(5px);filter:blur(4px);animation:ssub .9s cubic-bezier(.22,.61,.21,1) forwards;white-space:nowrap;}
-  .splash-sub span:nth-of-type(1){animation-delay:.95s;}
-  .splash-sub span:nth-of-type(2){animation-delay:1.25s;color:var(--ink);}
-  .splash-sub span:nth-of-type(3){animation-delay:1.55s;color:var(--accent);text-shadow:0 0 16px rgba(220,179,94,.45);}
+  .splash-sub span{opacity:0;letter-spacing:.5em;transform:translateY(5px);filter:blur(4px);animation:ssub 1.1s cubic-bezier(.22,.61,.21,1) forwards;white-space:nowrap;}
+  .splash-sub span:nth-of-type(1){animation-delay:1.5s;}
+  .splash-sub span:nth-of-type(2){animation-delay:2.5s;color:var(--ink);}
+  .splash-sub span:nth-of-type(3){animation-delay:3.5s;color:var(--accent);text-shadow:0 0 16px rgba(220,179,94,.45);}
   .splash-sub i{font-style:normal;color:var(--accent);opacity:0;animation:ssub .5s ease forwards;}
-  .splash-sub i:nth-of-type(1){animation-delay:1.1s;}
-  .splash-sub i:nth-of-type(2){animation-delay:1.4s;}
+  .splash-sub i:nth-of-type(1){animation-delay:2.2s;}
+  .splash-sub i:nth-of-type(2){animation-delay:3.2s;}
   @keyframes ssub{to{opacity:1;letter-spacing:.26em;transform:none;filter:blur(0);}}
-  .splash-rule{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;animation:srule .7s cubic-bezier(.2,.7,.2,1) 1.8s forwards;}
+  .splash-rule{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;animation:srule .7s cubic-bezier(.2,.7,.2,1) 4.6s forwards;}
   @keyframes srule{to{width:250px;opacity:.9;}}
   body.loaded .splash-sub span,body.loaded .splash-sub i,body.loaded .splash-rule{animation:none!important;opacity:0!important;}
   @media(max-width:520px){.splash-glyph{width:88px;height:88px;}.splash-sub{flex-direction:column;gap:6px;}.splash-sub i{display:none;}}
@@ -1098,9 +1098,7 @@ body{
 /* ===== Production clarity pass · 18 Aug 2026 =====
    The photograph belongs to the opening act. The archive below sits on a
    warmer, quieter editorial surface so the information is easier to scan. */
-body{
-  background:#1d1e1a;
-}
+.simple-latest,.simple-proof{background:#1d1e1a;}
 .desk-masthead{background:rgba(14,15,12,.97)}
 .tabs{background:rgba(17,18,15,.97)}
 body.on-home .desk-search{display:flex}
@@ -1246,7 +1244,7 @@ body.on-home .desk-search{display:flex}
   }
   splash.addEventListener("click",finish);
   document.addEventListener("keydown",function(event){if(event.key==="Escape"||event.key==="Enter")finish();});
-  setTimeout(finish,4600);
+  setTimeout(finish,6200);
 })();
 </script>
 
