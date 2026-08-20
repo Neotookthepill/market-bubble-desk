@@ -54,7 +54,7 @@ html,body{overflow-x:hidden;max-width:100%;}
 #splash{z-index:2147483000!important;}
 body.loaded #splash{opacity:0;pointer-events:none;}
 @keyframes splashFailsafe{to{opacity:0;visibility:hidden;pointer-events:none;}}
-#splash{animation:splashFailsafe .45s ease 2.6s forwards;}
+#splash{animation:splashFailsafe .45s ease 3.9s forwards;}
 .wstage{display:grid;place-items:center;}
 
 /* Market Bubble dark/gold interior (same tokens, brand colours) */
@@ -69,7 +69,7 @@ body.loaded #splash{opacity:0;pointer-events:none;}
 *{box-sizing:border-box;margin:0;padding:0;}
 :where(button,a,input,[tabindex]):focus-visible{outline:2px solid var(--brass);outline-offset:3px;}
 body{color:var(--ink1);font-family:"Inter",system-ui,sans-serif;font-size:15px;line-height:1.58;-webkit-font-smoothing:antialiased;
-  background:radial-gradient(120% 80% at 70% -10%,rgba(203,162,77,.06),transparent 45%),linear-gradient(rgba(14,15,18,.82),rgba(12,13,16,.9)),var(--deskbg) 22% -8%/140% fixed no-repeat #101014;}
+  background:radial-gradient(120% 80% at 70% -10%,rgba(203,162,77,.06),transparent 45%),linear-gradient(rgba(14,15,18,.82),rgba(12,13,16,.9)),var(--deskbg) 22% -8%/cover fixed no-repeat #101014;}
 a{color:inherit;}
 .col{max-width:1140px;margin:0 auto;padding:0 28px;}
 
@@ -1246,7 +1246,7 @@ body.on-home .desk-search{display:flex}
   }
   splash.addEventListener("click",finish);
   document.addEventListener("keydown",function(event){if(event.key==="Escape"||event.key==="Enter")finish();});
-  setTimeout(finish,2200);
+  setTimeout(finish,4600);
 })();
 </script>
 
