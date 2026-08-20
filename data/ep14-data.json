@@ -1,0 +1,132 @@
+{
+  "episode": {
+    "ep": 14,
+    "date": "2026-08-06",
+    "title": "First In-Person Episode",
+    "vid": "FFFnEnXzgEY",
+    "note": "Transcript ingested so far: intro + announcements (0:00 to 4:12). Market segment pending.",
+    "epTitle": "I Don't Think Intelligence Matters Anymore",
+    "duration_s": 8082
+  },
+  "index_moments": [
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 0,
+      "title": "Intro · first in-person episode",
+      "assets": [],
+      "topics": [
+        "show",
+        "in-person",
+        "positioning"
+      ],
+      "guests": [
+        "Banks",
+        "Z"
+      ],
+      "isEp": true,
+      "epTitle": "First In-Person Episode"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 58,
+      "title": "“We called the bottom”",
+      "assets": [
+        "BTC"
+      ],
+      "topics": [
+        "market",
+        "bottom",
+        "thesis-trail"
+      ],
+      "guests": [
+        "Ansem"
+      ],
+      "isEp": true,
+      "epTitle": "First In-Person Episode"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 98,
+      "title": "The kimchi run · 20M views",
+      "assets": [],
+      "topics": [
+        "attention",
+        "virality"
+      ],
+      "guests": [
+        "Ansem",
+        "Banks"
+      ],
+      "isEp": true,
+      "epTitle": "First In-Person Episode"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 217,
+      "title": "Black Bull graffiti comp · $15K Pump.fun bounty",
+      "assets": [
+        "BLACKBULL"
+      ],
+      "topics": [
+        "memecoin",
+        "pumpfun",
+        "community",
+        "degen"
+      ],
+      "guests": [
+        "Ansem"
+      ],
+      "isEp": true,
+      "epTitle": "First In-Person Episode"
+    }
+  ],
+  "calls": [
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 58,
+      "who": "Ansem",
+      "tick": "BTC",
+      "dir": "long",
+      "entry": null,
+      "q": "We called the bottom and since we called bottom everything has been blowing up.",
+      "ctx": "Extends the bottom-call thesis. Claims the July 58.8K bottom (Ep 10) played out as the market rallied. Stated generally as 'we called the bottom', not BTC-named in this exact line, so the market segment confirms the asset.",
+      "stype": "retrospective",
+      "stypeLabel": "Retrospective claim",
+      "stated": null,
+      "target": null
+    }
+  ],
+  "coverage_the_read": [
+    {
+      "asset": "BLACKBULL",
+      "type": "show-native meme",
+      "ep": 14,
+      "d": "2026-08-06",
+      "vid": "FFFnEnXzgEY",
+      "t": 217,
+      "note": "Ansem's Black Bull meme + a live Pump.fun bounty (~$15K, community art, top 10 paid, 3 days left). Show-native memecoin mechanic. Exactly the degen desk's lane: track the meme, the bounty, and the Pump.fun tokens tied to the show. Ansem won't break this down on air. The Read would.",
+      "independent": true
+    }
+  ],
+  "thesis_trail_update": {
+    "asset": "BTC · Ansem",
+    "new_moment": {
+      "date": "6 Aug · Ep 14",
+      "label": "Bottom call claimed validated",
+      "status": "Follow-through",
+      "detail": "'We called the bottom, everything's been blowing up.' The July 58.8K call, claimed to have played out.",
+      "source_t": 58,
+      "honest_note": "General phrasing here; confirm BTC-specific wording in the market segment before locking."
+    }
+  }
+}

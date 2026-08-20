@@ -1,0 +1,606 @@
+{
+  "episode": {
+    "ep": 14,
+    "date": "20260806",
+    "vid": "FFFnEnXzgEY",
+    "epTitle": "I Don't Think Intelligence Matters Anymore"
+  },
+  "moments": [
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 0,
+      "title": "Intro — First In-Person Episode",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 211,
+      "title": "Announcements",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 479,
+      "title": "Solana x WSOP Recap",
+      "assets": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 626,
+      "title": "The AI Poker Clip & CT Reaction",
+      "assets": [],
+      "topics": [
+        "clip"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 712,
+      "title": "Crypto Needs a Rebrand",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 1096,
+      "title": "Attention 101",
+      "assets": [],
+      "topics": [
+        "attention",
+        "kimchi"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 1647,
+      "title": "The Kimchi Masterclass",
+      "assets": [],
+      "topics": [
+        "attention",
+        "clip",
+        "kimchi"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 1970,
+      "title": "Dinner With Kimchi",
+      "assets": [],
+      "topics": [
+        "kimchi"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 2185,
+      "title": "Is Solana Back?",
+      "assets": [
+        "SOL"
+      ],
+      "topics": [
+        "nft",
+        "onchain"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 2469,
+      "title": "Ansem's On-Chain Picks",
+      "assets": [],
+      "topics": [
+        "nft",
+        "on-chain"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 2702,
+      "title": "Cash Cat & Robinhood",
+      "assets": [
+        "HOOD"
+      ],
+      "topics": [
+        "robinhood"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 3008,
+      "title": "Ansem Solo Q&A",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 3183,
+      "title": "Tushar Jain Joins",
+      "assets": [
+        "HYPE",
+        "ZEC"
+      ],
+      "topics": [
+        "multicoin"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 3289,
+      "title": "How Crypto Investing Has Changed",
+      "assets": [],
+      "topics": [
+        "multicoin"
+      ],
+      "guests": [
+        "Tushar"
+      ],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 3469,
+      "title": "The Zcash Thesis",
+      "assets": [
+        "ZEC"
+      ],
+      "topics": [
+        "attention"
+      ],
+      "guests": [
+        "Tushar"
+      ],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 4076,
+      "title": "Solana vs. Hyperliquid",
+      "assets": [
+        "HYPE",
+        "SOL"
+      ],
+      "topics": [],
+      "guests": [
+        "Tushar"
+      ],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 4200,
+      "title": "Seeding Solana & Buying Hype at $20",
+      "assets": [
+        "HYPE",
+        "SOL"
+      ],
+      "topics": [
+        "seed-round"
+      ],
+      "guests": [
+        "Tushar"
+      ],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 4378,
+      "title": "Worst Trades Ever",
+      "assets": [],
+      "topics": [],
+      "guests": [
+        "Tushar"
+      ],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 4632,
+      "title": "Zama & Privacy",
+      "assets": [
+        "ETH"
+      ],
+      "topics": [
+        "privacy"
+      ],
+      "guests": [
+        "Tushar"
+      ],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 4815,
+      "title": "AI Has Replaced IQ",
+      "assets": [],
+      "topics": [],
+      "guests": [
+        "Tushar"
+      ],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 5000,
+      "title": "The 4 Sources of Edge",
+      "assets": [],
+      "topics": [
+        "multicoin"
+      ],
+      "guests": [
+        "Tushar"
+      ],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 5295,
+      "title": "Rasmus Joins",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 5380,
+      "title": "WSOP Win & Getting Canceled",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 5557,
+      "title": "Trading to Farm Aura",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 5789,
+      "title": "The Kimchi Post Full Circle",
+      "assets": [],
+      "topics": [
+        "kimchi"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 6123,
+      "title": "The FaZe Reboot Playbook",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 6441,
+      "title": "Who Has the Most Potential?",
+      "assets": [],
+      "topics": [
+        "streamer"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 6929,
+      "title": "The Untapped Edge in Crypto",
+      "assets": [],
+      "topics": [
+        "clip"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 7108,
+      "title": "Stockbroker Explained",
+      "assets": [],
+      "topics": [
+        "memecoin"
+      ],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 7550,
+      "title": "Rasmus's Origin Story",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    },
+    {
+      "ep": 14,
+      "date": "20260806",
+      "vid": "FFFnEnXzgEY",
+      "t": 7908,
+      "title": "Wrap-Up",
+      "assets": [],
+      "topics": [],
+      "guests": [],
+      "isEp": true,
+      "epTitle": "I Don't Think Intelligence Matters Anymore"
+    }
+  ],
+  "statements": [
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 1244,
+      "who": "UNRESOLVED",
+      "who_org": null,
+      "tick": "HYPE",
+      "dir": null,
+      "q": "No, you're not going to hit a thousand X trading forex. But in crypto and even specifically now with hyperlquid enabling perks on stocks, you can trade",
+      "ctx": "",
+      "stype": "prediction",
+      "stypeLabel": "A prediction",
+      "verbatim_ok": true
+    },
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 1321,
+      "who": "UNRESOLVED",
+      "who_org": null,
+      "tick": "BTC",
+      "dir": null,
+      "q": "doesn't give a [ __ ] about doing any of that Bitcoin can't right because it's just Bitcoin ETH is never going to do it and honestly if ETH like you guys think that [laughter] video is cringe",
+      "ctx": "",
+      "stype": "prediction",
+      "stypeLabel": "A prediction",
+      "verbatim_ok": true
+    },
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 2380,
+      "who": "UNRESOLVED",
+      "who_org": null,
+      "tick": "BTC",
+      "dir": null,
+      "q": "selling millions into 60K is crazy and and Bitcoin printing a higher low.",
+      "ctx": "",
+      "stype": "prediction",
+      "stypeLabel": "A prediction",
+      "verbatim_ok": true
+    },
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 3657,
+      "who": "Tushar",
+      "who_org": "Multicoin Capital",
+      "tick": "ZEC",
+      "dir": null,
+      "q": "1 hour, 1 minute\nAnd I called a bunch of people in February of this year, which is when we put on the big Zcash position, and they were still excited about it.",
+      "ctx": "",
+      "stype": "disclosed_position",
+      "stypeLabel": "Disclosed position",
+      "verbatim_ok": true
+    },
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 3787,
+      "who": "Tushar",
+      "who_org": "Multicoin Capital",
+      "tick": "ZEC",
+      "dir": null,
+      "q": "1 hour, 3 minutes, 10 seconds\nthis happen for zoomers? Yeah, I absolutely think it could happen. I think what's going to happen for Zcash is not necessarily",
+      "ctx": "",
+      "stype": "prediction",
+      "stypeLabel": "A prediction",
+      "verbatim_ok": true
+    },
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 4333,
+      "who": "Tushar",
+      "who_org": "Multicoin Capital",
+      "tick": "HYPE",
+      "dir": null,
+      "q": "1 hour, 12 minutes, 16 seconds\nconfirmation, we got pretty excited. And so we put on a big position in February of this year uh into Hyperlquid. Uh, our",
+      "ctx": "",
+      "stype": "disclosed_position",
+      "stypeLabel": "Disclosed position",
+      "verbatim_ok": true
+    }
+  ],
+  "needs_review": [
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 1244,
+      "who": "UNRESOLVED",
+      "who_org": null,
+      "tick": "HYPE",
+      "dir": null,
+      "q": "No, you're not going to hit a thousand X trading forex. But in crypto and even specifically now with hyperlquid enabling perks on stocks, you can trade",
+      "ctx": "",
+      "stype": "prediction",
+      "stypeLabel": "A prediction",
+      "verbatim_ok": true
+    },
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 1321,
+      "who": "UNRESOLVED",
+      "who_org": null,
+      "tick": "BTC",
+      "dir": null,
+      "q": "doesn't give a [ __ ] about doing any of that Bitcoin can't right because it's just Bitcoin ETH is never going to do it and honestly if ETH like you guys think that [laughter] video is cringe",
+      "ctx": "",
+      "stype": "prediction",
+      "stypeLabel": "A prediction",
+      "verbatim_ok": true
+    },
+    {
+      "d": "2026-08-06",
+      "ep": 14,
+      "vid": "FFFnEnXzgEY",
+      "t": 2380,
+      "who": "UNRESOLVED",
+      "who_org": null,
+      "tick": "BTC",
+      "dir": null,
+      "q": "selling millions into 60K is crazy and and Bitcoin printing a higher low.",
+      "ctx": "",
+      "stype": "prediction",
+      "stypeLabel": "A prediction",
+      "verbatim_ok": true
+    }
+  ],
+  "honesty": {
+    "timestamps_out_of_range": 1,
+    "statements_unattributed": 3,
+    "statements_failing_verbatim": 0,
+    "guests_detected": [
+      "Tushar (Multicoin Capital)"
+    ],
+    "gate": "REVIEW"
+  }
+}
