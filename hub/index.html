@@ -343,6 +343,7 @@ body.on-home .tab.dupe{display:none;}
 .callc .bet{font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px;}
 .bet.up{background:var(--upT);color:var(--up);}.bet.down{background:var(--downT);color:var(--down);}
 .bet.hold{background:var(--brasstint);color:var(--brass);}.bet.avoid{background:var(--paper2);color:var(--ink2);}
+.bet.neutral{background:var(--paper2);color:var(--ink3);}
 .callc .who{font-size:14px;color:var(--ink2);font-weight:600;}
 .callc .when{margin-left:auto;font-size:12px;color:var(--ink3);}
 .callc q{display:block;font-family:"Cormorant Garamond";font-style:italic;font-size:20px;line-height:1.4;color:var(--ink1);quotes:"“" "”";margin-bottom:10px;}
@@ -793,7 +794,8 @@ body.on-home .desk-search{display:none}
 .simple-proof{padding:74px 0;border-top:1px solid var(--wline);border-bottom:1px solid var(--wline)}
 .proof-intro{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:end}
 .proof-intro>p{max-width:51ch;color:var(--ink2);font-size:14px;line-height:1.72}
-.proof-line{position:relative;display:grid;grid-template-columns:repeat(4,1fr);margin-top:42px;border-top:1px solid rgba(203,162,77,.48)}
+.proof-line{position:relative;display:grid;grid-template-columns:repeat(var(--proof-n,5),minmax(0,1fr));margin-top:42px}
+.proof-line::before{content:"";position:absolute;top:0;left:0;right:calc(100% / var(--proof-n,5));height:1px;background:rgba(203,162,77,.48);pointer-events:none}
 .proof-point{position:relative;padding:27px 28px 0 0;text-decoration:none}
 .proof-point::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--paper);border:2px solid var(--brass)}
 .proof-point time{font:700 8px "JetBrains Mono";letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
@@ -805,7 +807,7 @@ body.on-home .desk-search{display:none}
 .proof-close p em{font-family:"Playfair Display";font-size:16px;color:var(--ink1)}
 .proof-close button{border:1px solid var(--brass);background:var(--brass);color:#111;padding:13px 18px;font:700 9px "JetBrains Mono";letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
 .simple-footer{display:flex;justify-content:space-between;gap:30px;padding:28px 0 46px;color:var(--ink3);font:600 8px "JetBrains Mono";letter-spacing:.08em;text-transform:uppercase}
-@media(max-width:850px){.simple-head,.proof-intro{grid-template-columns:1fr;gap:18px}.latest-frame{grid-template-columns:1fr}.episode-visual{min-height:300px}.proof-line{grid-template-columns:1fr 1fr;border-top:0}.proof-point{border-top:1px solid rgba(203,162,77,.35);padding:24px 18px 28px 0}.proof-point::before{top:-5px}.simple-footer{flex-direction:column}}
+@media(max-width:850px){.simple-head,.proof-intro{grid-template-columns:1fr;gap:18px}.latest-frame{grid-template-columns:1fr}.episode-visual{min-height:300px}.proof-line{grid-template-columns:1fr 1fr}.proof-line::before{display:none}.proof-point{border-top:1px solid rgba(203,162,77,.35);padding:24px 18px 28px 0}.proof-point::before{top:-5px}.simple-footer{flex-direction:column}}
 @media(max-width:520px){.simple-latest,.simple-proof{padding:52px 0}.latest-story{grid-template-columns:28px 1fr;padding:22px 18px}.latest-story .story-go{display:none}.proof-line{grid-template-columns:1fr}.proof-close{align-items:flex-start;flex-direction:column}.proof-close button{width:100%}.simple-footer{padding-bottom:30px}}
 
 /* ===== Warm graphite atmosphere =====
@@ -1257,9 +1259,9 @@ body.on-home .desk-search{display:flex}
     <span class="wordmark" role="img" aria-label="Market Bubble" title="Market Bubble"></span>
   </div>
 
-  <div class="edition-lockup" aria-label="Market Bubble Desk, issue 13">
+  <div class="edition-lockup" aria-label="Market Bubble Desk, issue 15">
     <div class="edition-name">The Market Bubble Desk</div>
-    <div class="edition-meta">Issue 013 · Archive indexed through Episode 13 · 31 Jul 2026</div>
+    <div class="edition-meta">Issue 015 · Archive indexed through Episode 15 · 13 Aug 2026</div>
   </div>
 
   <div class="headright">
@@ -1309,7 +1311,7 @@ body.on-home .desk-search{display:flex}
         </div>
         <div class="hero-cta-row">
           <button type="button" class="hero-primary" data-act="catchup">Read indexed edition →</button>
-          <span class="hero-proof"><b>Episode 13</b> · indexed 31 Jul 2026</span>
+          <span class="hero-proof"><b>Episode 15</b> · indexed 13 Aug 2026</span>
         </div>
         <div class="ed-searchwrap">
           <div class="ed-search">
@@ -1318,13 +1320,13 @@ body.on-home .desk-search{display:flex}
           </div>
           <div class="ed-panel" id="edPanel" role="listbox" aria-live="polite" hidden></div>
         </div>
-        <div class="ed-stats">240 moments across 13 episodes · every result linked to its source</div>
+        <div class="ed-stats">315 moments across 15 episodes · every result linked to its source</div>
       </div>
       <div class="desk-right">
         <div class="ledger-shell">
           <div class="ledger-book">
             <section class="ledger-page ledger-index" aria-label="The Living Index">
-              <div class="ledger-brandstamp" aria-label="Market Bubble archive" data-issue="ARCHIVE · 013">
+              <div class="ledger-brandstamp" aria-label="Market Bubble archive" data-issue="ARCHIVE · 015">
                 <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20 22 H80 V70 H44 L33 82 L33 70 H20 Z"/>
                   <polyline points="23 52 33 60 43 47 53 54 62 41 90 12"/>
@@ -1339,7 +1341,7 @@ body.on-home .desk-search{display:flex}
                 <button type="button" data-desk="calls" aria-selected="false"><span class="li-num">03</span><span>Theses</span></button>
                 <button type="button" data-desk="tape" aria-selected="false"><span class="li-num">04</span><span>Episodes</span></button>
               </div>
-              <div class="ledger-count">240 moments · 13 episodes</div>
+              <div class="ledger-count">315 moments · 15 episodes</div>
             </section>
             <div class="sheet-wrap"><article class="sheet ledger-page" id="sheet" aria-live="polite"></article></div>
           </div>
@@ -1357,35 +1359,35 @@ body.on-home .desk-search{display:flex}
     </div>
     <section class="simple-latest" aria-labelledby="simpleLatestTitle">
       <div class="simple-head">
-        <div><div class="simple-kicker">Indexed edition · Episode 13 · 31 Jul 2026</div><h2 id="simpleLatestTitle">What mattered<br><em>that week.</em></h2></div>
+        <div><div class="simple-kicker">Latest edition · Episode 15 · 13 Aug 2026</div><h2 id="simpleLatestTitle">What mattered<br><em>that week.</em></h2></div>
         <p>One place to catch the strongest ideas, guests and market views from the show. Every item opens at the exact second.</p>
       </div>
       <div class="latest-frame">
-        <div class="episode-visual" data-eplabel="ORIGINAL BROADCAST  ·  EPISODE 13">
-          <img src="https://img.youtube.com/vi/47AACkIhtG8/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/47AACkIhtG8/hqdefault.jpg'" alt="Market Bubble episode 13 with Banks and Ansem" loading="eager" decoding="async">
-          <a class="episode-play" href="https://youtu.be/47AACkIhtG8?t=3257" target="_blank" rel="noopener"><span class="play-dot">▶</span><b>Lead take · Ansem · 00:54:17</b><strong>Bitcoin’s 11% chance of reaching 100K looks too low.</strong></a>
+        <div class="episode-visual" data-eplabel="ORIGINAL BROADCAST  ·  EPISODE 15">
+          <img src="https://img.youtube.com/vi/NzpJTWJfdg4/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/NzpJTWJfdg4/hqdefault.jpg'" alt="Market Bubble episode 15" loading="eager" decoding="async">
+          <a class="episode-play" href="https://youtu.be/NzpJTWJfdg4?t=4699" target="_blank" rel="noopener"><span class="play-dot">▶</span><b>Lead take · The desk · 01:18:19</b><strong>Multicoin’s math puts Solana at $600.</strong></a>
         </div>
         <div class="latest-stories">
-          <a class="latest-story" href="https://youtu.be/47AACkIhtG8?t=3375" target="_blank" rel="noopener"><span class="story-n">01</span><span class="story-copy"><span>Johann Kerbrat · Robinhood</span><strong>Crypto distribution is becoming a mainstream product.</strong></span><span class="story-go">00:56:15 ↗</span></a>
-          <a class="latest-story" href="https://youtu.be/47AACkIhtG8?t=5354" target="_blank" rel="noopener"><span class="story-n">02</span><span class="story-copy"><span>Austin Barack · Market view</span><strong>Zcash, Venice and Arrow begin to resemble bottoms.</strong></span><span class="story-go">01:29:14 ↗</span></a>
-          <a class="latest-story" href="https://youtu.be/47AACkIhtG8?t=6400" target="_blank" rel="noopener"><span class="story-n">03</span><span class="story-copy"><span>Ivan Soto-Wright · MoonPay</span><strong>The on-ramp is where attention becomes market access.</strong></span><span class="story-go">01:46:40 ↗</span></a>
+          <a class="latest-story" href="https://youtu.be/NzpJTWJfdg4?t=592" target="_blank" rel="noopener"><span class="story-n">01</span><span class="story-copy"><span>Streamer</span><strong>Complex’s streamer rankings read like engagement bait.</strong></span><span class="story-go">00:09:52 ↗</span></a>
+          <a class="latest-story" href="https://youtu.be/NzpJTWJfdg4?t=3004" target="_blank" rel="noopener"><span class="story-n">02</span><span class="story-copy"><span>Ansem</span><strong>Copy traders are breaking the trade: the Frank DeGods problem.</strong></span><span class="story-go">00:50:04 ↗</span></a>
+          <a class="latest-story" href="https://youtu.be/NzpJTWJfdg4?t=3294" target="_blank" rel="noopener"><span class="story-n">03</span><span class="story-copy"><span>Ansem</span><strong>Ansem names his top 25 on-chain traders.</strong></span><span class="story-go">00:54:54 ↗</span></a>
         </div>
       </div>
     </section>
     <section class="simple-proof" aria-labelledby="simpleProofTitle">
       <div class="proof-intro">
         <div><div class="simple-kicker">Why this exists</div><h2 id="simpleProofTitle">A clip shows the moment.<br>We preserve <em>what changed.</em></h2></div>
-        <p>Ansem’s Bitcoin view across four episodes. No rewritten story, no three-hour replay: each change stays attached to his original words.</p>
+        <p>Ansem’s Bitcoin view across <span id="proofEpCount">five</span> episodes. No rewritten story, no three-hour replay: each change stays attached to his original words.</p>
       </div>
-      <div class="proof-line" aria-label="Ansem Bitcoin thesis through four episodes">
+      <div class="proof-line" aria-label="Ansem Bitcoin thesis, one continuous line">
         <a class="proof-point" href="https://youtu.be/qFeglFI5bac?t=2140" target="_blank" rel="noopener"><time>15 May · Ep 03</time><b>79K holds.</b><span>Opening bullish condition.</span></a>
         <a class="proof-point" href="https://youtu.be/liVvayvxoRU?t=734" target="_blank" rel="noopener"><time>05 Jun · Ep 05</time><b>Wrong above 70K.</b><span>The view turns bearish.</span></a>
         <a class="proof-point" href="https://youtu.be/G4gMRER22O8?t=195" target="_blank" rel="noopener"><time>10 Jul · Ep 10</time><b>Claims the 58.8K low.</b><span>Logged as retrospective.</span></a>
         <a class="proof-point" href="https://youtu.be/47AACkIhtG8?t=3257" target="_blank" rel="noopener"><time>31 Jul · Ep 13</time><b>11% looks too low.</b><span>A new probability view.</span></a><a class="proof-point" href="https://youtu.be/FFFnEnXzgEY?t=2458" target="_blank" rel="noopener"><time>06 Aug · Ep 14</time><b>Bottoms in.</b><span>A higher low, a great spot.</span></a>
       </div>
-      <div class="proof-close"><div class="proof-text"><p><em>Moment → context → change → source.</em><br>The entire product, understood in one line.</p><p class="proof-engine">Verified, not curated. Every quote checked verbatim, every timestamp snapped to the second, every count recomputed from source.</p></div><button type="button" data-act="calls" data-filter="BTC">Open thesis record →</button></div>
+      <div class="proof-close"><div class="proof-text"><p><em>Moment → context → change → source.</em><br>The entire product, understood in one line.</p><p class="proof-engine">Clarity, without rewriting history. Every quote remains verbatim. Every change stays in sequence. Every timestamp returns to its source.</p></div><button type="button" data-act="calls" data-filter="BTC">Open thesis record →</button></div>
     </section>
-    <footer class="simple-footer"><span>The Market Bubble Desk · built by @KtheQuant</span><span>240 moments · 13 episodes · source-linked</span></footer>
+    <footer class="simple-footer"><span>The Market Bubble Desk · built by @KtheQuant</span><span>315 moments · 15 episodes · source-linked</span></footer>
   </section>
 
   <!-- CALLS -->
@@ -1400,24 +1402,19 @@ body.on-home .desk-search{display:flex}
   <!-- LEARN -->
   <section class="view" id="view-learn">
     <div class="vhead"><div class="kick">Learn</div><h2>Get what they're talking about</h2>
-      <p>The show moves fast and assumes you keep up. This is where you catch up: the market language explained simply, and real calls taken apart so you can see how the thinking works.</p></div>
-    <div class="subnav" id="clsnav">
-      <button data-sub="lex" aria-selected="false" style="display:none">Learn the lingo</button>
-      <button data-sub="anat" aria-selected="true">How a call works</button>
-    </div>
-    <div class="sub" id="sub-lex">
-      <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input id="lq" type="text" aria-label="Look up a word in the lexicon" placeholder="Look up a word…" autocomplete="off"></div>
-      <div class="filt" id="lexfilt"></div><div class="count" id="lexcount"></div>
-      <div class="lex" id="lex"></div>
-    </div>
+      <p>Learn how a market view is built, tested and revised: real calls taken apart, and one conviction followed as it changed.</p></div>
     <div class="sub on" id="sub-anat"><div id="anat"></div></div>
+    <div class="academy-trail">
+      <div class="vhead" style="margin-top:36px;padding-top:28px;border-top:1px solid var(--wline)"><div class="kick">How conviction changes</div><h2>One thesis, tracked as it moved</h2>
+        <p>The same discipline applied to a single conviction over time: Ansem on Bitcoin, five episodes, every change kept attached to the moment it happened.</p></div>
+      <button type="button" class="sheet-cta" data-act="calls" data-filter="BTC">Open the BTC thesis record →</button>
+    </div>
   </section>
 
   <!-- CATCH UP -->
   <section class="view" id="view-catchup">
     <div class="vhead"><div class="kick">Catch up</div><h2>Catch up in five minutes</h2>
-      <p>Didn't catch the stream? Each show is around three hours. Here's the recap of what actually mattered, who was on, and the big call that came out of it. <b>3 of 13 episodes recapped so far.</b></p></div>
+      <p>Didn't catch the stream? Each show is around three hours. Here's the recap of what actually mattered, who was on, and the big call that came out of it. <b>5 of 15 episodes recapped so far.</b></p></div>
     <div id="dispatch"></div>
   </section>
 
@@ -1449,7 +1446,7 @@ body.on-home .desk-search{display:flex}
 
 <footer>
   <span>The Market Bubble Desk · built by <b>@KtheQuant</b> · Independent concept, not affiliated with Market Bubble</span>
-  <span>Indexed clips, terms and calls from episodes 1&ndash;13</span>
+  <span>Indexed clips, terms and calls from episodes 1&ndash;15</span>
 </footer>
 
 <script>
@@ -1533,9 +1530,14 @@ window.__FEAT={h:"Episode "+mx,sub:et,pad:String(mx).padStart(3,"0"),issue:"Issu
  var cnt={};ok.forEach(function(c){cnt[c.tick]=(cnt[c.tick]||0)+1;});
  var pool=ok.filter(function(c){return cnt[c.tick]>=3;});if(!pool.length)pool=ok;
  var dd=pool.sort(function(a,b){return a.d<b.d?1:(a.d>b.d?-1:(cnt[b.tick]-cnt[a.tick]||b.t-a.t));})[0];
- return dd?(dd.tick+" \u00b7 "+dd.who+" \u00b7 "+(dd.q||"").slice(0,46)+"\u2026 \u00b7 Ep "+dd.ep):null;})(),
+ return dd?(function(){var q=dd.q||"";var m=q.match(/^[^.!?]*[.!?]/);var first=m?m[0].trim():q;return dd.tick+" \u00b7 "+dd.who+" \u00b7 "+first+" \u00b7 Ep "+dd.ep;})():null;})(),
  stamp:(stories.length+1)+" moments \u00b7 exact seconds"};
 var bs=document.querySelector(".ledger-brandstamp");if(bs)bs.setAttribute("data-issue","ARCHIVE \u00b7 "+__FEAT.pad);
+var __pl=document.querySelector(".proof-line");
+if(__pl){var __pn=__pl.querySelectorAll(".proof-point").length;__pl.style.setProperty("--proof-n",__pn);
+ var __NUMW=["zero","one","two","three","four","five","six","seven","eight","nine","ten"];
+ var __ec=document.getElementById("proofEpCount");if(__ec)__ec.textContent=__NUMW[__pn]||String(__pn);
+ __pl.setAttribute("aria-label","Ansem Bitcoin thesis across "+(__NUMW[__pn]||__pn)+" episodes, one continuous line");}
 if(typeof DESK!=="undefined"&&DESK.today){DESK.today.h="Episode "+mx;DESK.today.sub=et;DESK.today.meta=M.length+" indexed moments";DESK.today.source="Episode "+mx+" \u00b7 "+M.length+" indexed moments";if(DESK.overview&&DESK.overview.index&&DESK.overview.index[3])DESK.overview.index[3][2]=(new Set(eps.map(function(x){return x.ep;})).size)+" on record";}
  var bs=document.querySelector(".ledger-brandstamp");if(bs)bs.setAttribute("data-issue","ARCHIVE · "+__FEAT.pad);
 }catch(e){console.warn("featured builder",e);}})();
@@ -1544,6 +1546,12 @@ document.querySelectorAll('.view:not(#view-home) .vhead').forEach(function(v){
  var a=document.createElement('a');a.className='vback';a.href='javascript:void(0)';a.textContent='\u2190 The Desk';
  a.addEventListener('click',function(){goTo('home');window.scrollTo({top:0});});
  v.insertBefore(a,v.firstChild);});
+var __convBtn=document.querySelector('.academy-trail [data-act]');
+if(__convBtn)__convBtn.addEventListener('click',function(){
+  goTo(__convBtn.dataset.act);
+  var f=__convBtn.dataset.filter;
+  if(f){var chip=document.querySelector('#callfilt [data-t="'+f+'"]');if(chip)chip.click();}
+});
 function goTo(v,tabEl){
   document.body.classList.toggle("on-home",v==="home");
   document.querySelectorAll(".view").forEach(s=>s.classList.remove("active"));
@@ -1571,28 +1579,28 @@ document.querySelector(".tabs").addEventListener("click",e=>{
 const DESK={
  overview:{label:"Market Bubble · The Desk",h:"One conversation.<br>Four useful layers.",body:"Catch up. Learn. Theses. Episodes. Four ways in, every one returns to the original moment.",
    index:[["01","TODAY",DISP.length+" editions"],["02","LEARN",ANAT.length+" studies"],["03","THESES",CALLS.length+" statements"],["04","EPISODES",(new Set(INDEX.filter(function(x){return typeof x.ep==="number";}).map(function(x){return x.ep;})).size)+" on record"]]},
- today:{label:"01 · Catch up",h:"Episode 13",sub:"He Turned $500 Into $40,000,000",body:"Three hours watched. Five minutes to understand.",meta:"4 guests · 20 moments · 3 market views",source:"Episode 13 · 20 indexed moments",track:["Moment","Context","Meaning","Source"],cta:["Read indexed edition · 5 min","catchup"]},
- tape:{label:"04 · Episodes",h:"The source tape.<br>Every second kept.",body:"Browse every conversation, then open any indexed moment at the exact second it was said.",meta:INDEX.length+" indexed moments",source:"13 episodes · timestamped source clips",track:["Episode","Moment","Context","Source"],cta:["Browse all episodes","episodes"]},
- academy:{label:"02 · Learn",h:"Learn through the conversation",sub:"Simple · Understand · Go deeper",body:"Every concept is explained at your level, with a real show moment as the example.",meta:ANAT.length+" structured breakdowns · "+LEX.length+" terms",source:"Episode 05 · 00:12:14",track:["Moment","Meaning","Lesson","Source"],cta:["Start learning","learn:anat"]},
- lexicon:{label:"Market Bubble · Lexicon",h:"The language,<br>connected.",body:"Every definition is attached to the moment it was used — so learning never leaves the conversation.",meta:LEX.length+" verified terms",source:LEX.length+" terms · source clips attached",track:["Word","Meaning","Example","Source"],cta:["Open the lexicon","learn:lex"]},
+ today:{label:"01 · Catch up",h:"Episode 15",sub:"Why Streaming Is The New Meta",body:"Three hours watched. Five minutes to understand.",meta:"44 indexed moments",source:"Episode 15 · 44 indexed moments",track:["Moment","Context","Meaning","Source"],cta:["Read indexed edition · 5 min","catchup"]},
+ tape:{label:"04 · Episodes",h:"The source tape.<br>Every second kept.",body:"Browse every conversation, then open any indexed moment at the exact second it was said.",meta:INDEX.length+" indexed moments",source:"15 episodes · timestamped source clips",track:["Episode","Moment","Context","Source"],cta:["Browse all episodes","episodes"]},
+ academy:{label:"02 · Learn",h:"Learn through the conversation",sub:"Simple · Understand · Go deeper",body:"Learn how a market view is built, tested and revised.",meta:ANAT.length+" call studies · 1 evolving thesis",source:"Episode 05 · 00:12:14",track:["Moment","Meaning","Lesson","Source"],cta:["Start learning","learn:anat"]},
+ 
  calls:{label:"03 · Theses",h:"One thesis.<br>Every change.",sub:"Every view kept in its original context.",body:"First statement, update, invalidation and outcome — preserved without rewriting the past.",meta:CALLS.length+" statements on record",source:CALLS.length+" statements · exact timestamps",track:["First stated","Changed","Outcome","Source"],cta:["Explore theses","calls"]},
  read:{label:"Independent analysis",h:"The Read by @KtheQuant",body:"Levels, wallet activity and dated analysis around the assets discussed on the show. Clearly separated from Market Bubble’s own views.",meta:"Independent layer · dated methodology",source:"Analysis · evidence and methodology",track:["Signal","Evidence","Read","Date"],cta:["Follow The Read","read"]}
 };
 const DIVIDERS=[["today","TODAY","Know what mattered"],["academy","LEARN","Understand the market"],["calls","THESES","Follow what changed"],["tape","EPISODES","Verify at source"]];
 
 function sheetHTML(k){var d=DESK[k];
- const folio=`<div class="sheet-folio"><span>Market Bubble · The Desk</span><span>${(window.__FEAT&&__FEAT.issue)||"Issue 013 · 31 Jul 2026"}</span></div>`;
- const footer=(label,num,verified)=>`<div class="sheet-footer"><span>${esc(label)}</span>${verified?`<span class="source-stamp">Source verified</span>`:""}<span class="folio-no">${(window.__FEAT&&__FEAT.pad)||"013"}—${esc(num)}</span></div>`;
+ const folio=`<div class="sheet-folio"><span>Market Bubble · The Desk</span><span>${(window.__FEAT&&__FEAT.issue)||"Issue 015 · 13 Aug 2026"}</span></div>`;
+ const footer=(label,num,verified)=>`<div class="sheet-footer"><span>${esc(label)}</span>${verified?`<span class="source-stamp">Source verified</span>`:""}<span class="folio-no">${(window.__FEAT&&__FEAT.pad)||"015"}—${esc(num)}</span></div>`;
  if(k==="overview"){return folio+`<div class="sheet-label">${d.label}</div><h2 class="sheet-h">${d.h}</h2><p class="sheet-body">${d.body}</p>`+
    `<div class="sheet-index">${d.index.map(x=>`<div><span class="ix">${x[0]}</span><span class="nm">${x[1]}</span><b>${x[2]}</b></div>`).join("")}</div>`+footer("Living index","00",false);}
  if(k==="today"){return folio+`<div class="sheet-label">${d.label}</div><h2 class="sheet-h">${(window.__FEAT&&__FEAT.h)||d.h}</h2><div class="sheet-sub">${esc((window.__FEAT&&__FEAT.sub)||d.sub)}</div>`+
    `<div class="today-rundown">${(window.__FEAT&&__FEAT.beats)?__FEAT.beats.map((b,i)=>`<div class="today-beat"><b>0${i+1}</b><span>${esc(b)}</span></div>`).join(""):`<div class="today-beat"><b>01</b><span>Ansem fades the 11% Polymarket line for Bitcoin to reach 100K.</span></div>`}</div>`+
    `<div class="today-call"><strong>Call to follow</strong>${(window.__FEAT&&__FEAT.call)||"BTC · 100K by year end · original market probability 11%"}</div>`+
    `<button type="button" class="sheet-cta" data-act="${d.cta[1]}">${esc(d.cta[0])} →</button>`+footer((window.__FEAT&&__FEAT.stamp)||"4 moments · exact seconds","01",true);}
- if(k==="calls"){return folio+`<div class="sheet-label">${d.label}</div><h2 class="sheet-h">BTC · Ansem</h2><div class="trace-title">One thesis · four moments</div>`+
-   `<div class="thesis-timeline"><div class="thesis-event"><time>15 May</time><span><strong>Bullish.</strong> 79K named as the key level.</span></div><div class="thesis-event"><time>05 Jun</time><span><strong>View changed.</strong> 60K “won’t hold”; wrong above 70K.</span></div><div class="thesis-event"><time>10 Jul</time><span><strong>Retrospective claim.</strong> He says he called the 58.8K low.</span></div><div class="thesis-event current"><time>31 Jul</time><span><strong>Probability view.</strong> Fades 11% odds for 100K by year end.</span></div></div>`+
+ if(k==="calls"){return folio+`<div class="sheet-label">${d.label}</div><h2 class="sheet-h">BTC · Ansem</h2><div class="trace-title">One thesis · five moments</div>`+
+   `<div class="thesis-timeline"><div class="thesis-event"><time>15 May</time><span><strong>Bullish.</strong> 79K named as the key level.</span></div><div class="thesis-event"><time>05 Jun</time><span><strong>View changed.</strong> 60K “won’t hold”; wrong above 70K.</span></div><div class="thesis-event"><time>10 Jul</time><span><strong>Retrospective claim.</strong> He says he called the 58.8K low.</span></div><div class="thesis-event"><time>31 Jul</time><span><strong>Probability view.</strong> Fades 11% odds for 100K by year end.</span></div><div class="thesis-event current"><time>06 Aug</time><span><strong>Directional read.</strong> Not fully bullish yet; says bottoms are in.</span></div></div>`+
    `<div class="trace-verdict">Nothing rewritten. Every change remains attached to the moment it was said.</div>`+
-   `<div class="source-spine"><div class="source-line">Source · 4 episodes · exact timestamps</div><div class="source-track"><span>First stated</span><span>Changed</span><span>Marked</span><span>Now</span></div></div>`+
+   `<div class="source-spine"><div class="source-line">Source · 5 episodes · exact timestamps</div><div class="source-track"><span>First stated</span><span>Changed</span><span>Marked</span><span>Updated</span></div></div>`+
    `<button type="button" class="sheet-cta" data-act="${d.cta[1]}">${esc(d.cta[0])} →</button>`+footer("Thesis record","03",true);}
  return folio+`<div class="sheet-label">${d.label}</div><h2 class="sheet-h">${d.h}</h2>`+
    (d.sub?`<div class="sheet-sub">${esc(d.sub)}</div>`:"")+
@@ -1756,11 +1764,11 @@ var dEl=document.getElementById("dossier");
 if(!dEl){dEl=document.createElement("div");dEl.id="dossier";host.parentNode.insertBefore(dEl,tsEl);}
 if(!cf){tsEl.innerHTML="";dEl.innerHTML="";}else{
  (function(){var all=CALLS.filter(function(c){return c.tick===cf;});if(!all.length){dEl.innerHTML="";return;}
-  var ups=all.filter(function(c){return c.dir==="long";}).length,downs=all.filter(function(c){return c.dir==="short";}).length;
   var byD=all.slice().sort(function(a,b){return a.d<b.d?-1:1;});
   var first=byD[0];var lm=byD[byD.length-1];
   var ST=["position","flat","trade","hold"];
   var stances=byD.filter(function(c){return ST.indexOf(c.stype)>=0&&c.who&&c.who!=="UNRESOLVED";});
+  var ups=stances.filter(function(c){return c.dir==="long";}).length,downs=stances.filter(function(c){return c.dir==="short";}).length;
   var ls=stances.length?stances[stances.length-1]:null;
   var seq=stances.filter(function(c){return c.dir==="long"||c.dir==="short";});
   var flips=0;for(var i2=1;i2<seq.length;i2++)if(seq[i2].dir!==seq[i2-1].dir)flips++;
@@ -1768,14 +1776,16 @@ if(!cf){tsEl.innerHTML="";dEl.innerHTML="";}else{
   var epLbl=function(e){return (e&&e>0)?("Ep "+e):"Standalone clip";};
   var lsH=ls?("Last position stated \u00b7 <b>"+esc(ls.who)+"</b> \u00b7 "+(BETL[ls.dir]||"")+" \u00b7 "+esc(ls.d)+" \u00b7 "+epLbl(ls.ep)):"No first-person position stated on air yet";
   var lmH=(lm&&(!ls||lm.d!==ls.d))?(" \u00b7 Last mention "+esc(lm.d)+(ST.indexOf(lm.stype)<0?" (direction not stated as a position)":"")):"";
-  dEl.innerHTML='<div class="dossier-line">'+ups+' betting up \u00b7 '+downs+' betting down'+(flips?(' \u00b7 '+flips+' stance flip'+(flips>1?'s':'')):'')+' \u00b7 first logged '+esc(first.d)+'</div><div class="dossier-line2">'+lsH+lmH+'</div>';})();
+  var stanceN=ups+downs;
+  var posLine=stanceN?(ups+' up \u00b7 '+downs+' down of '+stanceN+' disclosed position'+(stanceN>1?'s':'')):'No disclosed positions yet, opinions only';
+  dEl.innerHTML='<div class="dossier-line">'+all.length+' mention'+(all.length>1?'s':'')+' \u00b7 '+posLine+(flips?(' \u00b7 '+flips+' stance flip'+(flips>1?'s':'')):'')+' \u00b7 first logged '+esc(first.d)+'</div><div class="dossier-line2">'+lsH+lmH+'</div>';})();
  var pool=CALLS.filter(c=>c.tick===cf&&c.d&&c.who&&c.who!=="UNRESOLVED");
  var by={};pool.forEach(c=>{(by[c.who]=by[c.who]||[]).push(c);});
  var who=Object.keys(by).sort((a,b)=>by[b].length-by[a].length)[0];
  if(who&&by[who].length>=3){var ns=by[who].slice().sort((a,b)=>a.d<b.d?-1:(a.d>b.d?1:a.t-b.t));
   tsEl.innerHTML='<div class="trail-head">'+esc(who)+' on '+esc(cf)+' \u00b7 the thesis, in order</div><div class="trail-strip">'+ns.map(function(n){return '<a class="trail-node" href="'+yt(n.vid,n.t)+'" target="_blank" rel="noopener"><time>'+esc((n.d||"").slice(5))+' \u00b7 Ep '+n.ep+'</time><b>'+esc(n.stypeLabel||"")+'</b><span>'+esc((n.q||"").slice(0,52))+'\u2026</span></a>';}).join('')+'</div>';}
  else tsEl.innerHTML="";}})();
-document.getElementById("calls").innerHTML=res.map(c=>{const bet=BET[c.dir]||["hold",c.dir];const st=STYPE[c.stype]||["Statement","st-pos"];
+document.getElementById("calls").innerHTML=res.map(c=>{const bet=BET[c.dir]||["hold",c.dir];const st=STYPE[c.stype]||["Statement","st-pos"];const isPosition=["trade","position","hold"].includes(c.stype);const betCls=isPosition?bet[0]:"neutral";
     const d=delta(c);
     const kind=st[0].replace(/^(a|an)\s+/i,"").toLowerCase();
     const article=/^[aeiou]/i.test(kind)?"an":"a";
@@ -1785,7 +1795,7 @@ document.getElementById("calls").innerHTML=res.map(c=>{const bet=BET[c.dir]||["h
     else if(c.stated){level=`<span class="lvl">Said on air · <b>${esc(c.stated)}</b></span>`;}
     else{level=`<span class="lvl none">No specific level was stated — this is ${article} ${kind}, not a scoreable trade.</span>`;}
     return `<div class="callc">
-      <div class="callc-top"><span class="tk">${c.tick}</span><span class="stype ${st[1]}">${st[0]}</span><span class="bet ${bet[0]}">${bet[1]}</span><span class="who">${esc(c.who)}</span><span class="when">${dlong(c.d)} · ${episodeLabel}</span></div>
+      <div class="callc-top"><span class="tk">${c.tick}</span><span class="stype ${st[1]}">${st[0]}</span><span class="bet ${betCls}">${bet[1]}</span><span class="who">${esc(c.who)}</span><span class="when">${dlong(c.d)} · ${episodeLabel}</span></div>
       <q>${esc(c.q)}</q><div class="ctx">${esc(c.ctx)}</div>
       <div class="status">${level}<a class="watch" href="${yt(c.vid,c.t)}" target="_blank" rel="noopener" aria-label="Watch ${esc(c.who)} say this about ${c.tick}, ${episodeLabel}">Watch ↗</a></div></div>`;}).join("");
   const graded=res.filter(c=>delta(c)).length;
@@ -1799,11 +1809,14 @@ document.getElementById("callfilt").addEventListener("click",e=>{const b=e.targe
 crender();
 
 /* ===== LEARN: subnav ===== */
-document.getElementById("clsnav").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+var __clsnav=document.getElementById("clsnav");if(__clsnav)__clsnav.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
   document.querySelectorAll("#clsnav button").forEach(x=>x.setAttribute("aria-selected",x===b));
   document.querySelectorAll("#view-learn .sub").forEach(s=>s.classList.remove("on"));document.getElementById("sub-"+b.dataset.sub).classList.add("on");});
 
-/* lexicon */
+/* lexicon: internal data only now, no public UI surface. Guarded so it
+   simply does nothing if the markup (removed from the public Learn view)
+   is not present. LEX itself stays intact for future/internal use. */
+if(document.getElementById("lexfilt")&&document.getElementById("lq")){
 let lCat=null;const lq=document.getElementById("lq");
 const cats=[...new Set(LEX.map(t=>t.cat))];
 document.getElementById("lexfilt").innerHTML=`<span class="glab">Filter</span><button class="fchip" data-cat="__all" aria-pressed="true">All</button>`+cats.map(c=>`<button type="button" class="fchip" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
@@ -1816,6 +1829,7 @@ lq.addEventListener("input",lrenderLex);
 document.getElementById("lexfilt").addEventListener("click",e=>{const b=e.target.closest(".fchip");if(!b)return;const c=b.dataset.cat;lCat=c==="__all"?null:c;
   document.querySelectorAll("#lexfilt .fchip").forEach(x=>x.setAttribute("aria-pressed",x.dataset.cat===c));lrenderLex();});
 lrenderLex();
+}
 
 /* anatomy */
 document.getElementById("anat").innerHTML=ANAT.map(a=>{const bet=BET[a.dir]||["hold",a.dir];return `
@@ -2018,7 +2032,7 @@ function cmdSearch(){
   else{if(mo.length)groups.push(["Moments",mo]);if(ca.length)groups.push(["Calls",ca]);}
   const le=rank(LEX,x=>[[x.term,2],[x.def,0.6]],()=>!hasEnt||words.length>0,4)
     .map(x=>({tag:x.cat,main:HL(x.term,term)+" \u2014 <span style='color:var(--ink3)'>"+esc(x.def.slice(0,60))+"\u2026</span>",sub:x.vid?"hear it \u2197":"",url:x.vid?yt(x.vid,x.t):"#"}));
-  if(le.length&&!hasEnt)groups.push(["Learn the lingo",le]);
+  // lexicon intentionally not surfaced in search: internal data only, not a verified public surface
   const pe=rank(VOICES,v=>[[v.name,2],[v.handle||"",1.4],[v.role,1]],v=>!person||v.name.split(" ")[0]===person.split(" ")[0],4)
     .map(v=>({tag:v.host?"Host":"Ep "+v.ep,main:HL(v.name,term)+" <span style='color:var(--ink3)'>\u00b7 "+esc(v.role)+"</span>",sub:"watch \u2197",url:yt(v.vid,v.t)}));
   if(pe.length&&(person||!hasEnt))groups.push(["People",pe]);
@@ -2054,7 +2068,8 @@ document.body.classList.add("on-home");
     {date:"15 May · Ep 03",moment:"Bullish · 79K holds",status:"Opening view",video:"qFeglFI5bac",time:2140,quote:"I do think Bitcoin is in a great spot right now. Technically, I think it's holding this key level, which is like 79K.",change:"Bullish while the 79K level holds.",read:"A condition, not a target. The value is the level attached to the view."},
     {date:"05 Jun · Ep 05",moment:"Bearish · wrong above 70K",status:"View changed",video:"liVvayvxoRU",time:734,quote:"I'm wrong if Bitcoin gets back above 70K. That's when I'm wrong. But I do think 60K is not going to hold.",change:"He expects 60K to break and explicitly marks invalidation above 70K.",read:"Direction, target condition and invalidation appear together. The record preserves the sequence instead of forcing a clean win-or-loss story."},
     {date:"10 Jul · Ep 10",moment:"Looking back · 58.8K",status:"Retrospective claim",video:"G4gMRER22O8",time:195,quote:"I called bottom on Bitcoin around like 58.8K or whatever it was.",change:"He says on air that he called the 58.8K bottom.",read:"Logged as a claim made after the fact, not as proof of a call recorded live at 58.8K."},
-    {date:"31 Jul · Ep 13",moment:"Probability · 11% too low",status:"Current view",video:"47AACkIhtG8",time:3257,quote:"I think it's higher than 11% chance that it's going to hit 100K by the end of the year.",change:"He is fading the market's live 11% probability for Bitcoin to reach 100K.",read:"Not maximum bullishness: a dated, public and eventually scoreable probability view."}
+    {date:"31 Jul · Ep 13",moment:"Probability · 11% too low",status:"Probability view",video:"47AACkIhtG8",time:3257,quote:"I think it's higher than 11% chance that it's going to hit 100K by the end of the year.",change:"He is fading the market's live 11% probability for Bitcoin to reach 100K.",read:"Not maximum bullishness: a dated, public and eventually scoreable probability view."},
+    {date:"06 Aug · Ep 14",moment:"Directional · bottoms in",status:"Directional read",video:"FFFnEnXzgEY",time:2458,quote:"I don't flip full bullish yet, but bottoms in. I think we're in a great spot.",change:"The view advances from a probability fade to a cautiously bullish market read built around a higher low.",read:"The language remains qualified: he does not claim full bullishness, but says the bottom is in and the market is in a great spot."}
   ];
   var tabs=document.getElementById("caseTabs"),record=document.getElementById("caseRecord");if(!tabs||!record)return;
   function esc(value){return String(value).replace(/[&<>\"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
