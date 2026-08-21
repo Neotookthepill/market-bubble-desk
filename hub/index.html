@@ -71,7 +71,7 @@ body.loaded #splash{opacity:0;pointer-events:none;}
 body{color:var(--ink1);font-family:"Inter",system-ui,sans-serif;font-size:15px;line-height:1.58;-webkit-font-smoothing:antialiased;
   background:#101014;}
 a{color:inherit;}
-.col{max-width:1140px;margin:0 auto;padding:0 28px;}
+.col{max-width:1400px;margin:0 auto;padding:0 28px;background:#1a1b18;position:relative;z-index:1;}
 
 /* ===== dark masthead ===== */
 header{position:sticky;top:0;z-index:50;background:#12130f;border-bottom:2px solid var(--brass);
@@ -239,7 +239,7 @@ body.on-home .tab.dupe{display:none;}
 
 /* ===== warm tab bar ===== */
 .tabs{position:sticky;top:66px;z-index:40;background:rgba(11,12,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--wline);}
-.tabs .inner{max-width:1140px;margin:0 auto;padding:0 16px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;}
+.tabs .inner{max-width:1400px;margin:0 auto;padding:0 16px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;}
 .tabs .inner::-webkit-scrollbar{display:none;}
 .tab{position:relative;background:transparent;border:0;color:var(--ink2);cursor:pointer;white-space:nowrap;
   font-family:"Inter";font-weight:600;font-size:14px;letter-spacing:.01em;padding:15px 16px 13px;transition:color .15s;}
@@ -442,7 +442,7 @@ body.on-home .tab.dupe{display:none;}
 .voice .vcalls{font-size:12px;color:var(--ink2);}.voice .vcalls b{color:var(--ink1);}
 .voice .vlink{font-size:11px;color:var(--brass);font-weight:500;}
 
-footer{border-top:1px solid var(--wline);padding:24px 28px 44px;font-size:12px;color:var(--ink3);max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+footer{border-top:1px solid var(--wline);padding:24px 28px 44px;font-size:12px;color:var(--ink3);max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
 footer b{color:var(--ink2);}
 
 
@@ -547,11 +547,11 @@ body.on-home .desk-search{display:none;}
 }
 
 /* ===== THE LIVING INDEX · OPEN LEDGER ===== */
-.desk{grid-template-columns:minmax(0,.72fr) minmax(660px,1.28fr);gap:56px;}
+.desk{grid-template-columns:minmax(360px,.68fr) minmax(760px,1.32fr);gap:48px;}
 .desk-right{display:block;position:relative;min-width:0;padding:14px 26px 18px 0;}
 .ledger-shell{position:relative;background:#171713;border:1px solid #343128;border-radius:12px;padding:15px 16px 18px;box-shadow:0 38px 86px -34px rgba(0,0,0,.98),0 12px 28px rgba(0,0,0,.52),inset 0 1px rgba(255,255,255,.035);}
 .ledger-shell::before{content:"";position:absolute;inset:5px;background-color:#171713;background-image:linear-gradient(100deg,rgba(255,255,255,.035),transparent 32%,rgba(0,0,0,.28) 49%,rgba(255,255,255,.025) 72%,transparent),repeating-radial-gradient(ellipse at 30% 40%,rgba(255,255,255,.018) 0 1px,rgba(0,0,0,.018) 1px 3px);border-radius:9px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035),inset 0 14px 30px rgba(255,255,255,.025),inset 0 -12px 22px rgba(0,0,0,.38);}
-.ledger-book{position:relative;display:grid;grid-template-columns:43% 57%;height:560px;filter:drop-shadow(0 19px 23px rgba(0,0,0,.42));}
+.ledger-book{position:relative;display:grid;grid-template-columns:43% 57%;height:495px;filter:drop-shadow(0 19px 23px rgba(0,0,0,.42));}
 .ledger-book::before{content:"";position:absolute;z-index:-1;left:7px;right:5px;bottom:-7px;height:13px;border-radius:0 0 5px 5px;background:repeating-linear-gradient(0deg,#bcb5a5 0 1px,#d8d1c0 1px 2px,#a9a293 2px 3px);box-shadow:0 7px 10px rgba(0,0,0,.3);}
 .ledger-book::after{content:"";position:absolute;z-index:5;left:43%;top:3px;bottom:3px;width:25px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(40,33,24,.12) 29%,rgba(15,13,10,.24) 47%,rgba(255,255,255,.2) 53%,rgba(51,42,30,.08) 72%,transparent);pointer-events:none;mix-blend-mode:multiply;}
 .ledger-page{position:relative;color:#1c1b18;background-color:#e9e4d7;background-image:radial-gradient(circle at 20% 10%,rgba(255,255,255,.58),transparent 34%),repeating-linear-gradient(0deg,rgba(65,54,38,.009) 0,rgba(65,54,38,.009) 1px,transparent 1px,transparent 4px);border:1px solid rgba(61,54,43,.22);overflow:hidden;}
@@ -589,7 +589,7 @@ body.on-home .desk-search{display:none;}
 .sheet-sub{font-size:20px;margin-top:20px;line-height:1.38;}
 .sheet-body{font-size:14px;line-height:1.65;margin-top:20px;max-width:32ch;}
 .sheet-meta{font-size:10px;margin-top:20px;text-transform:uppercase;letter-spacing:.08em;}
-.sheet-cta{margin-top:24px;padding:0;background:transparent;color:#22201c;border-radius:0;font-family:"JetBrains Mono";font-size:10px;letter-spacing:.12em;text-transform:uppercase;}
+#sheet .sheet-cta{margin-top:24px;padding:0;background:transparent;color:#22201c;border-radius:0;font-family:"JetBrains Mono";font-size:10px;letter-spacing:.12em;text-transform:uppercase;}
 .sheet-cta:hover{background:transparent;color:#9b7120;}
 .source-spine{margin-top:auto;padding-top:24px;}
 .source-line{font-family:"JetBrains Mono";font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#4e493f;margin-bottom:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
@@ -717,7 +717,7 @@ body.on-home .desk-search{display:none;}
 
 /* EDITORIAL CONTINUATION · ONE SHEET PULLED FROM THE BOOK */
 .evidence-spread{position:relative;margin:34px 0 0;padding:78px 0 76px;border-top:1px solid var(--wline);border-bottom:1px solid var(--wline)}
-.evidence-spread::before{content:"";position:absolute;inset:0 -12vw;background:radial-gradient(ellipse at 50% 50%,rgba(104,80,41,.13),transparent 56%),linear-gradient(90deg,transparent,rgba(255,255,255,.012),transparent);pointer-events:none}
+.evidence-spread::before{display:none}
 .evidence-heading{position:relative;display:grid;grid-template-columns:minmax(0,.7fr) minmax(360px,1.3fr);gap:48px;align-items:end;margin-bottom:30px}
 .evidence-heading .overline{font:700 9px "JetBrains Mono";letter-spacing:.18em;text-transform:uppercase;color:var(--brass)}
 .evidence-heading h2{margin-top:13px;font:700 clamp(34px,4.8vw,56px)/.99 "Playfair Display";letter-spacing:-.03em;color:var(--ink1)}
@@ -837,8 +837,8 @@ body{
 .latest-frame{background:rgba(29,30,25,.84);box-shadow:0 28px 70px -52px rgba(0,0,0,.7)}
 .simple-latest,.simple-proof{position:relative}
 .simple-latest::before,.simple-proof::before{content:"";position:absolute;z-index:-1;inset:0 -12vw;pointer-events:none}
-.simple-latest::before{background:linear-gradient(90deg,transparent,rgba(255,248,226,.022) 50%,transparent)}
-.simple-proof::before{background:radial-gradient(ellipse at 48% 40%,rgba(203,162,77,.065),transparent 66%)}
+.simple-latest::before{display:none}
+.simple-proof::before{display:none}
 
 /* ===== FINAL ART DIRECTION · PUBLISHING-GRADE LEDGER =====
    The object stays quiet. Authority comes from print craft, provenance and restraint. */
@@ -1135,20 +1135,8 @@ body.on-home .desk-search{display:flex}
   pointer-events:none;
 }
 .simple-latest,.simple-proof{isolation:isolate}
-.simple-latest::before{
-  z-index:-1;
-  inset:0 50%;
-  max-width:100%;width:100%;
-  transform:translateX(50%);
-  background:#24251f;
-}
-.simple-proof::before{
-  z-index:-1;
-  inset:0 50%;
-  max-width:100%;width:100%;
-  transform:translateX(50%);
-  background:radial-gradient(ellipse at 48% 38%,rgba(203,162,77,.07),transparent 64%),#1d1e1a;
-}
+.simple-latest::before{display:none}
+.simple-proof::before{display:none}
 .simple-footer{background:#1d1e1a}
 
 /* Let the real broadcast carry more of the Market Bubble identity. */
@@ -1255,6 +1243,15 @@ body.on-home .desk-search{display:flex}
 .vjump{display:flex;gap:8px;margin:10px 0 4px;flex-wrap:wrap;}
 .vjump a{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.04em;color:var(--ink3);text-decoration:none;padding:5px 11px;border:1px solid var(--wline);border-radius:20px;cursor:pointer;transition:.15s;}
 .vjump a:hover{border-color:var(--brass);color:var(--brass);}
+
+.read-preview{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:20px 0;}
+.read-card{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:5px;padding:16px 18px;background:var(--paper2);border:1px solid var(--wline);border-radius:12px;cursor:pointer;transition:border-color .15s;font-family:inherit;}
+.read-card:hover{border-color:var(--brass);}
+.read-tk{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--brass);letter-spacing:.06em;font-weight:700;}
+.read-nm{font-family:"Instrument Serif",serif;font-size:18px;color:var(--ink1);}
+.read-bias{font-size:11px;color:var(--ink3);font-style:italic;}
+.read-last{font-size:11.5px;color:var(--ink2);line-height:1.4;margin-top:4px;}
+@media(max-width:600px){.read-preview{grid-template-columns:1fr;}}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Market Bubble Desk">
@@ -1477,6 +1474,12 @@ body.on-home .desk-search{display:flex}
         <p>The same discipline applied to a single conviction over time: Ansem on Bitcoin, five episodes, every change kept attached to the moment it happened.</p></div>
       <button type="button" class="sheet-cta" data-act="calls" data-filter="BTC">Open the BTC thesis record →</button>
     </div>
+    <div class="read-trail">
+      <div class="vhead" style="margin-top:36px;padding-top:28px;border-top:1px solid var(--wline)"><div class="kick">The Read · by @KtheQuant</div><h2>Independent analysis, dated before you know if it worked</h2>
+        <p>Notes on the assets discussed on the show: the levels that matter, wallet activity, where I stand. <b>Independent analysis · not an official Market Bubble position.</b></p></div>
+      <div class="read-preview" id="readPreview"></div>
+      <button type="button" class="sheet-cta" data-act="read">Open The Read →</button>
+    </div>
   </section>
 
   <!-- CATCH UP -->
@@ -1622,13 +1625,13 @@ setTimeout(function(){try{
 }catch(e){console.warn("featured builder (deferred DESK update)",e);}},0);
  var bs=document.querySelector(".ledger-brandstamp");if(bs)bs.setAttribute("data-issue","ARCHIVE · "+__FEAT.pad);
 }catch(e){console.warn("featured builder",e);}})();
-document.querySelectorAll('.view:not(#view-home) .vhead').forEach(function(v){
+document.querySelectorAll('.view:not(#view-home) > .vhead').forEach(function(v){
  if(v.querySelector('.vback'))return;
  var a=document.createElement('a');a.className='vback';a.href='javascript:void(0)';a.textContent='\u2190 The Desk';
  a.addEventListener('click',function(){goTo('home');window.scrollTo({top:0});});
  v.insertBefore(a,v.firstChild);});
 var __SECTIONS=[["catchup","Catch up"],["learn","Learn"],["calls","Theses"],["episodes","Episodes"]];
-document.querySelectorAll('.view:not(#view-home) .vhead').forEach(function(v){
+document.querySelectorAll('.view:not(#view-home) > .vhead').forEach(function(v){
   if(v.querySelector('.vjump'))return;
   var host=v.closest('.view');if(!host)return;
   var mine=host.id.replace('view-','');
@@ -1647,6 +1650,18 @@ if(__convBtn)__convBtn.addEventListener('click',function(){
   goTo(__convBtn.dataset.act);
   var f=__convBtn.dataset.filter;
   if(f){var chip=document.querySelector('#callfilt [data-t="'+f+'"]');if(chip)chip.click();}
+});
+var __readBtn=document.querySelector('.read-trail [data-act="read"]');
+if(__readBtn)__readBtn.addEventListener('click',function(){goTo('read');});
+var __readPrev=document.getElementById('readPreview');
+if(__readPrev)__readPrev.innerHTML=COVERAGE.map(function(c){
+  var last=c.entries[0];
+  return '<button type="button" class="read-card" data-c="'+esc(c.ticker)+'"><span class="read-tk">'+esc(c.ticker)+'</span><span class="read-nm">'+esc(c.name)+'</span><span class="read-bias">'+esc(c.bias)+'</span><span class="read-last">'+esc(last.date)+' \u00b7 '+esc(last.title)+'</span></button>';
+}).join('');
+if(__readPrev)__readPrev.addEventListener('click',function(e){
+  var b=e.target.closest('.read-card');if(!b)return;
+  goTo('read');
+  setTimeout(function(){var chip=document.querySelector('#coinpick [data-c="'+b.dataset.c+'"]');if(chip)chip.click();},50);
 });
 function goTo(v,tabEl){
   document.body.classList.toggle("on-home",v==="home");
