@@ -1228,7 +1228,7 @@ body.on-home .desk-search{display:flex}
 .thesis-event:hover{opacity:.7;}
 .thesis-event:hover span::after{content:" \u2197";color:var(--brass);}
 
-.simple-ways{padding:64px 0 76px;border-top:1px solid var(--wline);}
+.simple-ways{padding:52px 0 64px;border-bottom:1px solid var(--wline);}
 .ways-h{font-family:"Instrument Serif",serif;font-size:clamp(24px,3vw,32px);font-weight:400;color:var(--ink1);margin:8px 0 32px;max-width:44ch;}
 .ways-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
 .way-card{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:8px;padding:22px 20px;background:var(--paper2);border:1px solid var(--wline);border-radius:14px;cursor:pointer;transition:border-color .15s,transform .15s;font-family:inherit;}
@@ -1394,6 +1394,16 @@ body.on-home .desk-search{display:flex}
         <div class="dividers" id="dividers" role="tablist" aria-label="Sections of the desk"></div>
       </div>
     </div>
+    <section class="simple-ways">
+      <div class="simple-kicker">FOUR WAYS IN</div>
+      <h2 class="ways-h">Everything the desk holds, one door each.</h2>
+      <div class="ways-grid">
+        <button type="button" class="way-card" data-act="catchup"><span class="way-n">01</span><span class="way-t">Catch up</span><span class="way-d">Every episode, five minutes each. What mattered, who was on, the biggest call.</span><span class="way-stat" id="wayStat01"></span><span class="way-go">Read the editions →</span></button>
+        <button type="button" class="way-card" data-act="learn"><span class="way-n">02</span><span class="way-t">Learn</span><span class="way-d">How a real call works, entry to outcome — and one conviction followed as it changed.</span><span class="way-stat" id="wayStat02"></span><span class="way-go">Open the academy →</span></button>
+        <button type="button" class="way-card" data-act="calls"><span class="way-n">03</span><span class="way-t">Theses</span><span class="way-d">Every statement, classified honestly. Opinions kept separate from real positions.</span><span class="way-stat" id="wayStat03"></span><span class="way-go">Open the record →</span></button>
+        <button type="button" class="way-card" data-act="episodes"><span class="way-n">04</span><span class="way-t">Episodes</span><span class="way-d">The full source archive. Every conversation, indexed and searchable.</span><span class="way-stat" id="wayStat04"></span><span class="way-go">Browse episodes →</span></button>
+      </div>
+    </section>
     <section class="simple-latest" aria-labelledby="simpleLatestTitle">
       <div class="simple-head">
         <div><div class="simple-kicker">Latest edition · Episode 15 · 13 Aug 2026</div><h2 id="simpleLatestTitle">What mattered<br><em>that week.</em></h2></div>
@@ -1424,16 +1434,7 @@ body.on-home .desk-search{display:flex}
       </div>
       <div class="proof-close"><div class="proof-text"><p><em>Moment → context → change → source.</em><br>The entire product, understood in one line.</p><p class="proof-engine">Clarity, without rewriting history. Every quote remains verbatim. Every change stays in sequence. Every timestamp returns to its source.</p></div><button type="button" data-act="calls" data-filter="BTC">Open thesis record →</button></div>
     </section>
-    <section class="simple-ways">
-      <div class="simple-kicker">FOUR WAYS IN</div>
-      <h2 class="ways-h">Everything the desk holds, one door each.</h2>
-      <div class="ways-grid">
-        <button type="button" class="way-card" data-act="catchup"><span class="way-n">01</span><span class="way-t">Catch up</span><span class="way-d">Every episode, five minutes each. What mattered, who was on, the biggest call.</span><span class="way-stat" id="wayStat01"></span><span class="way-go">Read the editions →</span></button>
-        <button type="button" class="way-card" data-act="learn"><span class="way-n">02</span><span class="way-t">Learn</span><span class="way-d">How a real call works, entry to outcome — and one conviction followed as it changed.</span><span class="way-stat" id="wayStat02"></span><span class="way-go">Open the academy →</span></button>
-        <button type="button" class="way-card" data-act="calls"><span class="way-n">03</span><span class="way-t">Theses</span><span class="way-d">Every statement, classified honestly. Opinions kept separate from real positions.</span><span class="way-stat" id="wayStat03"></span><span class="way-go">Open the record →</span></button>
-        <button type="button" class="way-card" data-act="episodes"><span class="way-n">04</span><span class="way-t">Episodes</span><span class="way-d">The full source archive. Every conversation, indexed and searchable.</span><span class="way-stat" id="wayStat04"></span><span class="way-go">Browse episodes →</span></button>
-      </div>
-    </section>
+    
     <footer class="simple-footer"><span>The Market Bubble Desk · built by @KtheQuant</span><span>315 moments · 15 episodes · source-linked</span></footer>
   </section>
 
