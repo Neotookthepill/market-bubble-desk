@@ -162,7 +162,7 @@ body.on-home .tab.dupe{display:none;}
 @media(max-width:900px){.desk{min-height:0;}.today-cards{grid-template-columns:1fr;}.today{margin-top:8px;}}
 
 /* ===== THE EDITOR'S DESK ===== */
-.desk{display:grid;grid-template-columns:minmax(0,0.92fr) minmax(0,1.02fr);gap:56px;align-items:center;padding:14px 0 34px;}
+.desk{display:grid;grid-template-columns:minmax(0,0.78fr) minmax(0,1.22fr);gap:56px;align-items:center;padding:14px 0 34px;}
 .ed-label{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:22px;}
 .ed-h1{font-family:"Playfair Display";font-weight:700;font-size:clamp(40px,5.3vw,60px);line-height:1.03;letter-spacing:-.02em;color:var(--ink1);}
 .ed-h1 em{font-style:italic;color:var(--brass);}
@@ -547,11 +547,11 @@ body.on-home .desk-search{display:none;}
 }
 
 /* ===== THE LIVING INDEX · OPEN LEDGER ===== */
-.desk{grid-template-columns:minmax(0,.82fr) minmax(560px,1.18fr);gap:56px;}
+.desk{grid-template-columns:minmax(0,.72fr) minmax(660px,1.28fr);gap:56px;}
 .desk-right{display:block;position:relative;min-width:0;padding:14px 26px 18px 0;}
 .ledger-shell{position:relative;background:#171713;border:1px solid #343128;border-radius:12px;padding:15px 16px 18px;box-shadow:0 38px 86px -34px rgba(0,0,0,.98),0 12px 28px rgba(0,0,0,.52),inset 0 1px rgba(255,255,255,.035);}
 .ledger-shell::before{content:"";position:absolute;inset:5px;background-color:#171713;background-image:linear-gradient(100deg,rgba(255,255,255,.035),transparent 32%,rgba(0,0,0,.28) 49%,rgba(255,255,255,.025) 72%,transparent),repeating-radial-gradient(ellipse at 30% 40%,rgba(255,255,255,.018) 0 1px,rgba(0,0,0,.018) 1px 3px);border-radius:9px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035),inset 0 14px 30px rgba(255,255,255,.025),inset 0 -12px 22px rgba(0,0,0,.38);}
-.ledger-book{position:relative;display:grid;grid-template-columns:43% 57%;height:470px;filter:drop-shadow(0 19px 23px rgba(0,0,0,.42));}
+.ledger-book{position:relative;display:grid;grid-template-columns:43% 57%;height:560px;filter:drop-shadow(0 19px 23px rgba(0,0,0,.42));}
 .ledger-book::before{content:"";position:absolute;z-index:-1;left:7px;right:5px;bottom:-7px;height:13px;border-radius:0 0 5px 5px;background:repeating-linear-gradient(0deg,#bcb5a5 0 1px,#d8d1c0 1px 2px,#a9a293 2px 3px);box-shadow:0 7px 10px rgba(0,0,0,.3);}
 .ledger-book::after{content:"";position:absolute;z-index:5;left:43%;top:3px;bottom:3px;width:25px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(40,33,24,.12) 29%,rgba(15,13,10,.24) 47%,rgba(255,255,255,.2) 53%,rgba(51,42,30,.08) 72%,transparent);pointer-events:none;mix-blend-mode:multiply;}
 .ledger-page{position:relative;color:#1c1b18;background-color:#e9e4d7;background-image:radial-gradient(circle at 20% 10%,rgba(255,255,255,.58),transparent 34%),repeating-linear-gradient(0deg,rgba(65,54,38,.009) 0,rgba(65,54,38,.009) 1px,transparent 1px,transparent 4px);border:1px solid rgba(61,54,43,.22);overflow:hidden;}
@@ -1340,6 +1340,10 @@ body.on-home .desk-search{display:flex}
 </div>
 <div class="tabs"><div class="inner" role="tablist">
   <button type="button" class="tab" role="tab" aria-selected="true" data-view="home">The Desk</button>
+  <button type="button" class="tab" role="tab" aria-selected="false" data-view="catchup">Catch up</button>
+  <button type="button" class="tab" role="tab" aria-selected="false" data-view="learn">Learn</button>
+  <button type="button" class="tab" role="tab" aria-selected="false" data-view="calls">Theses</button>
+  <button type="button" class="tab" role="tab" aria-selected="false" data-view="episodes">Episodes</button>
   <button type="button" class="desk-search" id="hsearch" aria-label="Search everything in the Market Bubble archive">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
     <span>Search everything</span><kbd>/</kbd>
@@ -1413,10 +1417,10 @@ body.on-home .desk-search{display:flex}
       <div class="simple-kicker">FOUR WAYS IN</div>
       <h2 class="ways-h">Everything the desk holds, one door each.</h2>
       <div class="ways-grid">
-        <button type="button" class="way-card" data-act="catchup" data-bignum="01"><span class="way-n">01</span><span class="way-t">Catch up</span><span class="way-d">Every episode, five minutes each. What mattered, who was on, the biggest call.</span><span class="way-stat" id="wayStat01"></span><span class="way-go">Read the editions →</span></button>
-        <button type="button" class="way-card" data-act="learn" data-bignum="02"><span class="way-n">02</span><span class="way-t">Learn</span><span class="way-d">How a real call works, entry to outcome — and one conviction followed as it changed.</span><span class="way-stat" id="wayStat02"></span><span class="way-go">Open the academy →</span></button>
-        <button type="button" class="way-card" data-act="calls" data-bignum="03"><span class="way-n">03</span><span class="way-t">Theses</span><span class="way-d">Every statement, classified honestly. Opinions kept separate from real positions.</span><span class="way-stat" id="wayStat03"></span><span class="way-go">Open the record →</span></button>
-        <button type="button" class="way-card" data-act="episodes" data-bignum="04"><span class="way-n">04</span><span class="way-t">Episodes</span><span class="way-d">The full source archive. Every conversation, indexed and searchable.</span><span class="way-stat" id="wayStat04"></span><span class="way-go">Browse episodes →</span></button>
+        <button type="button" class="way-card" data-act="catchup"><span class="way-t">Catch up</span><span class="way-d">Every episode, five minutes each. What mattered, who was on, the biggest call.</span><span class="way-stat" id="wayStat01"></span><span class="way-go">Read the editions →</span></button>
+        <button type="button" class="way-card" data-act="learn"><span class="way-t">Learn</span><span class="way-d">How a real call works, entry to outcome — and one conviction followed as it changed.</span><span class="way-stat" id="wayStat02"></span><span class="way-go">Open the academy →</span></button>
+        <button type="button" class="way-card" data-act="calls"><span class="way-t">Theses</span><span class="way-d">Every statement, classified honestly. Opinions kept separate from real positions.</span><span class="way-stat" id="wayStat03"></span><span class="way-go">Open the record →</span></button>
+        <button type="button" class="way-card" data-act="episodes"><span class="way-t">Episodes</span><span class="way-d">The full source archive. Every conversation, indexed and searchable.</span><span class="way-stat" id="wayStat04"></span><span class="way-go">Browse episodes →</span></button>
       </div>
       <button type="button" class="ways-extra" data-act="guests">Or browse everyone who’s been on the show → <span id="wayStatGuests"></span></button>
     </section>
@@ -2189,7 +2193,7 @@ function cmdSearch(){
   const escp=w=>w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
   const ws=(w,f)=>{if(!f)return 0;if(new RegExp("\\b"+escp(w)+"\\b","i").test(f))return 3;if(new RegExp("\\b"+escp(w),"i").test(f))return 2;return 0;};
   const sc=(fields)=>{let tot=0;for(const alts of words){let best=0;for(const w of alts){for(const fp of fields){best=Math.max(best,ws(w,(fp[0]||"").toLowerCase())*fp[1]);}}if(best===0)return -1;tot+=best;}return tot;};
-  const rank=(arr,fieldsOf,pre,n)=>arr.filter(pre).map(x=>[x,words.length?sc(fieldsOf(x)):1]).filter(p=>p[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,n).map(p=>p[0]);
+  const rank=(arr,fieldsOf,pre,n)=>arr.filter(pre).map(x=>[x,words.length?sc(fieldsOf(x)):1]).filter(p=>p[1]>0).sort((a,b)=>(b[1]-a[1])||((b[0].d||b[0].date||"")<(a[0].d||a[0].date||"")?-1:1)).slice(0,n).map(p=>p[0]);
   const groups=[];
   /* structured pass: entities become hard filters */
   const cPre=c=>(!person||c.who===person||((c.who||"").split(" ")[0]===person.split(" ")[0]))&&(!tick||c.tick===tick)&&(!sty||(c.stype||"").includes(sty))&&(!epNum||c.ep===epNum);
