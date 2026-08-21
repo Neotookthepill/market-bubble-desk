@@ -702,6 +702,11 @@ body.on-home .desk-search{display:none;}
 .closing-actions .solid{background:var(--brass);border:1px solid var(--brass);color:#17130b}.closing-actions .ghost{background:transparent;border:1px solid var(--wline);color:var(--ink1)}
 .episode-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .episode-row{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:center;padding:18px 19px;border:1px solid var(--wline);border-radius:9px;background:var(--card);text-decoration:none;transition:.18s var(--ease)}
+.episode-row{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;padding:12px 19px 12px 12px;border:1px solid var(--wline);border-radius:9px;background:var(--card);text-decoration:none;transition:.18s var(--ease)}
+.episode-thumb{position:relative;width:120px;height:67px;border-radius:6px;overflow:hidden;background:#0d0d0a;flex-shrink:0;}
+.episode-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.episode-thumb .episode-no{position:absolute;bottom:4px;left:6px;font:700 9px "JetBrains Mono";letter-spacing:.06em;color:#fff;background:rgba(0,0,0,.72);padding:2px 6px;border-radius:4px;}
+@media(max-width:600px){.episode-row{grid-template-columns:88px 1fr;}.episode-thumb{width:88px;height:50px;}.episode-open{display:none;}}
 .episode-row:hover{border-color:var(--brassL);background:var(--cardh);transform:translateY(-2px)}
 .episode-no{font:700 10px "JetBrains Mono";letter-spacing:.08em;color:var(--brass)}
 .episode-copy b{display:block;font:700 16px/1.25 "Playfair Display";color:var(--ink1);margin-bottom:5px}.episode-copy span{font:500 9px "JetBrains Mono";letter-spacing:.05em;color:var(--ink3)}
@@ -1228,20 +1233,28 @@ body.on-home .desk-search{display:flex}
 .thesis-event:hover{opacity:.7;}
 .thesis-event:hover span::after{content:" \u2197";color:var(--brass);}
 
-.simple-ways{padding:52px 0 64px;border-bottom:1px solid var(--wline);}
-.ways-h{font-family:"Instrument Serif",serif;font-size:clamp(24px,3vw,32px);font-weight:400;color:var(--ink1);margin:8px 0 32px;max-width:44ch;}
-.ways-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.way-card{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:8px;padding:22px 20px;background:var(--paper2);border:1px solid var(--wline);border-radius:14px;cursor:pointer;transition:border-color .15s,transform .15s;font-family:inherit;}
-.way-card:hover{border-color:var(--brass);transform:translateY(-2px);}
-.way-n{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--brass);letter-spacing:.08em;}
-.way-t{font-family:"Instrument Serif",serif;font-size:22px;color:var(--ink1);}
-.way-d{font-size:12.5px;line-height:1.5;color:var(--ink3);}
-.way-stat{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--ink3);margin-top:auto;padding-top:6px;}
-.way-go{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--brass);letter-spacing:.03em;}
+.simple-ways{padding:56px 0 68px;border-bottom:1px solid var(--wline);}
+.ways-h{font-family:"Instrument Serif",serif;font-size:clamp(26px,3.2vw,34px);font-weight:400;color:var(--ink1);margin:10px 0 34px;max-width:44ch;}
+.ways-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.way-card{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:9px;padding:26px 22px 24px;background:linear-gradient(160deg,var(--paper2) 0%,var(--card) 100%);border:1px solid var(--wline);border-radius:16px;cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s;font-family:inherit;}
+.way-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brass),var(--brassL,var(--brass)));transform:scaleX(0);transform-origin:left;transition:transform .25s;}
+.way-card::after{content:attr(data-bignum);position:absolute;right:-6px;bottom:-22px;font-family:"Instrument Serif",serif;font-size:96px;line-height:1;color:var(--ink1);opacity:.05;pointer-events:none;font-style:italic;}
+.way-card:hover{border-color:var(--brass);transform:translateY(-4px);box-shadow:0 16px 32px -12px rgba(0,0,0,.45);}
+.way-card:hover::before{transform:scaleX(1);}
+.way-n{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--brass);letter-spacing:.1em;font-weight:700;}
+.way-t{font-family:"Instrument Serif",serif;font-size:26px;color:var(--ink1);font-weight:400;}
+.way-d{font-size:12.5px;line-height:1.55;color:var(--ink3);position:relative;z-index:1;}
+.way-stat{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--brass);opacity:.75;margin-top:auto;padding-top:8px;font-weight:600;letter-spacing:.02em;}
+.way-go{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--brass);letter-spacing:.03em;font-weight:700;display:flex;align-items:center;gap:4px;transition:gap .2s;}
+.way-card:hover .way-go{gap:8px;}
 @media(max-width:900px){.ways-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.ways-grid{grid-template-columns:1fr;}}
 .ways-extra{display:block;margin-top:18px;background:none;border:none;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ink3);cursor:pointer;padding:0;}
 .ways-extra:hover{color:var(--brass);}
+
+.vjump{display:flex;gap:8px;margin:10px 0 4px;flex-wrap:wrap;}
+.vjump a{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.04em;color:var(--ink3);text-decoration:none;padding:5px 11px;border:1px solid var(--wline);border-radius:20px;cursor:pointer;transition:.15s;}
+.vjump a:hover{border-color:var(--brass);color:var(--brass);}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Market Bubble Desk">
@@ -1400,10 +1413,10 @@ body.on-home .desk-search{display:flex}
       <div class="simple-kicker">FOUR WAYS IN</div>
       <h2 class="ways-h">Everything the desk holds, one door each.</h2>
       <div class="ways-grid">
-        <button type="button" class="way-card" data-act="catchup"><span class="way-n">01</span><span class="way-t">Catch up</span><span class="way-d">Every episode, five minutes each. What mattered, who was on, the biggest call.</span><span class="way-stat" id="wayStat01"></span><span class="way-go">Read the editions →</span></button>
-        <button type="button" class="way-card" data-act="learn"><span class="way-n">02</span><span class="way-t">Learn</span><span class="way-d">How a real call works, entry to outcome — and one conviction followed as it changed.</span><span class="way-stat" id="wayStat02"></span><span class="way-go">Open the academy →</span></button>
-        <button type="button" class="way-card" data-act="calls"><span class="way-n">03</span><span class="way-t">Theses</span><span class="way-d">Every statement, classified honestly. Opinions kept separate from real positions.</span><span class="way-stat" id="wayStat03"></span><span class="way-go">Open the record →</span></button>
-        <button type="button" class="way-card" data-act="episodes"><span class="way-n">04</span><span class="way-t">Episodes</span><span class="way-d">The full source archive. Every conversation, indexed and searchable.</span><span class="way-stat" id="wayStat04"></span><span class="way-go">Browse episodes →</span></button>
+        <button type="button" class="way-card" data-act="catchup" data-bignum="01"><span class="way-n">01</span><span class="way-t">Catch up</span><span class="way-d">Every episode, five minutes each. What mattered, who was on, the biggest call.</span><span class="way-stat" id="wayStat01"></span><span class="way-go">Read the editions →</span></button>
+        <button type="button" class="way-card" data-act="learn" data-bignum="02"><span class="way-n">02</span><span class="way-t">Learn</span><span class="way-d">How a real call works, entry to outcome — and one conviction followed as it changed.</span><span class="way-stat" id="wayStat02"></span><span class="way-go">Open the academy →</span></button>
+        <button type="button" class="way-card" data-act="calls" data-bignum="03"><span class="way-n">03</span><span class="way-t">Theses</span><span class="way-d">Every statement, classified honestly. Opinions kept separate from real positions.</span><span class="way-stat" id="wayStat03"></span><span class="way-go">Open the record →</span></button>
+        <button type="button" class="way-card" data-act="episodes" data-bignum="04"><span class="way-n">04</span><span class="way-t">Episodes</span><span class="way-d">The full source archive. Every conversation, indexed and searchable.</span><span class="way-stat" id="wayStat04"></span><span class="way-go">Browse episodes →</span></button>
       </div>
       <button type="button" class="ways-extra" data-act="guests">Or browse everyone who’s been on the show → <span id="wayStatGuests"></span></button>
     </section>
@@ -1610,6 +1623,21 @@ document.querySelectorAll('.view:not(#view-home) .vhead').forEach(function(v){
  var a=document.createElement('a');a.className='vback';a.href='javascript:void(0)';a.textContent='\u2190 The Desk';
  a.addEventListener('click',function(){goTo('home');window.scrollTo({top:0});});
  v.insertBefore(a,v.firstChild);});
+var __SECTIONS=[["catchup","Catch up"],["learn","Learn"],["calls","Theses"],["episodes","Episodes"]];
+document.querySelectorAll('.view:not(#view-home) .vhead').forEach(function(v){
+  if(v.querySelector('.vjump'))return;
+  var host=v.closest('.view');if(!host)return;
+  var mine=host.id.replace('view-','');
+  var strip=document.createElement('div');strip.className='vjump';
+  __SECTIONS.forEach(function(s){
+    if(s[0]===mine)return;
+    var b=document.createElement('a');b.href='javascript:void(0)';b.textContent=s[1];
+    b.addEventListener('click',function(){goTo(s[0]);window.scrollTo({top:0});});
+    strip.appendChild(b);
+  });
+  var back=v.querySelector('.vback');
+  if(back&&back.nextSibling)v.insertBefore(strip,back.nextSibling);else v.appendChild(strip);
+});
 var __convBtn=document.querySelector('.academy-trail [data-act]');
 if(__convBtn)__convBtn.addEventListener('click',function(){
   goTo(__convBtn.dataset.act);
@@ -2016,7 +2044,7 @@ document.getElementById('episodeIndex').innerHTML=episodeNumbers.map(function(ep
   var date=String(first.date||'');
   var dateLabel=date.length===8?date.slice(0,4)+'-'+date.slice(4,6)+'-'+date.slice(6):date;
   return '<a class="episode-row" href="'+yt(first.vid,0)+'" target="_blank" rel="noopener">'+
-    '<span class="episode-no">EP '+String(ep).padStart(2,'0')+'</span>'+
+    '<span class="episode-thumb"><img src="https://i.ytimg.com/vi/'+esc(first.vid)+'/hqdefault.jpg" alt="" loading="lazy"><span class="episode-no">EP '+String(ep).padStart(2,'0')+'</span></span>'+
     '<span class="episode-copy"><b>'+esc(first.epTitle||('Market Bubble · Episode '+ep))+'</b><span>'+esc(dateLabel)+' · '+moments.length+' indexed moments</span></span>'+
     '<span class="episode-open">Open source ↗</span></a>';
 }).join('');
