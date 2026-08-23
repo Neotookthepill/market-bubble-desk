@@ -1388,8 +1388,8 @@ body.on-home .simple-footer{
 <div class="tabs"><div class="inner" role="tablist">
   <button type="button" class="tab" role="tab" aria-selected="true" data-view="home">The Desk</button>
   <button type="button" class="tab" role="tab" aria-selected="false" data-view="catchup">Catch up</button>
-  <button type="button" class="tab" role="tab" aria-selected="false" data-view="learn">Learn</button>
-  <button type="button" class="tab" role="tab" aria-selected="false" data-view="calls">Theses</button>
+  <button type="button" class="tab" role="tab" aria-selected="false" data-view="learn">Academy</button>
+  <button type="button" class="tab" role="tab" aria-selected="false" data-view="calls">Calls</button>
   <button type="button" class="tab" role="tab" aria-selected="false" data-view="episodes">Episodes</button>
   <button type="button" class="tab" role="tab" aria-selected="false" data-view="charts">The Setup</button>
   <button type="button" class="desk-search" id="hsearch" aria-label="Search everything in the Market Bubble archive">
@@ -1409,8 +1409,8 @@ body.on-home .simple-footer{
         <p class="ed-lede"><strong>Three hours distilled into five minutes.</strong> The moments that mattered, the ideas behind them and the exact source.</p>
         <div class="promise-rail" aria-label="What you can do">
           <button type="button" class="promise-chip" data-desk="today"><b>01</b> Catch up in 5 min</button>
-          <button type="button" class="promise-chip" data-desk="academy"><b>02</b> Learn the market</button>
-          <button type="button" class="promise-chip" data-desk="calls"><b>03</b> Follow every thesis</button>
+          <button type="button" class="promise-chip" data-desk="academy"><b>02</b> Study real calls</button>
+          <button type="button" class="promise-chip" data-desk="calls"><b>03</b> Track every market view</button>
           <button type="button" class="promise-chip" data-desk="tape"><b>04</b> Verify at source</button>
         </div>
         <div class="hero-cta-row">
@@ -1441,8 +1441,8 @@ body.on-home .simple-footer{
               <div class="ledger-kicker">The Living Index <span>Four ways into the conversation</span></div>
               <div class="ledger-menu">
                 <button type="button" data-desk="today" aria-selected="true"><span class="li-num">01</span><span>Catch up</span></button>
-                <button type="button" data-desk="academy" aria-selected="false"><span class="li-num">02</span><span>Learn</span></button>
-                <button type="button" data-desk="calls" aria-selected="false"><span class="li-num">03</span><span>Theses</span></button>
+                <button type="button" data-desk="academy" aria-selected="false"><span class="li-num">02</span><span>Academy</span></button>
+                <button type="button" data-desk="calls" aria-selected="false"><span class="li-num">03</span><span>Calls</span></button>
                 <button type="button" data-desk="tape" aria-selected="false"><span class="li-num">04</span><span>Episodes</span></button>
               </div>
               <div class="ledger-count">439 moments · 16 episodes</div>
@@ -1466,8 +1466,8 @@ body.on-home .simple-footer{
       <h2 class="ways-h">Everything the desk holds, one door each.</h2>
       <div class="ways-grid">
         <button type="button" class="way-card" data-act="catchup"><span class="way-t">Catch up</span><span class="way-d">Every episode, five minutes each. What mattered, who was on, the biggest call.</span><span class="way-stat" id="wayStat01"></span><span class="way-go">Read the editions →</span></button>
-        <button type="button" class="way-card" data-act="learn"><span class="way-t">Learn</span><span class="way-d">How a real call works, entry to outcome, and one conviction followed as it changed.</span><span class="way-stat" id="wayStat02"></span><span class="way-go">Open the academy →</span></button>
-        <button type="button" class="way-card" data-act="calls"><span class="way-t">Theses</span><span class="way-d">Every statement, classified honestly. Opinions kept separate from real positions.</span><span class="way-stat" id="wayStat03"></span><span class="way-go">Open the record →</span></button>
+        <button type="button" class="way-card" data-act="learn"><span class="way-t">Academy</span><span class="way-d">Learn how a market view becomes a real call. 3 source-linked studies.</span><span class="way-stat" id="wayStat02"></span><span class="way-go">Open the academy →</span></button>
+        <button type="button" class="way-card" data-act="calls"><span class="way-t">Calls</span><span class="way-d">Every market view on record. Follow what was said, what changed and return to the source.</span><span class="way-stat" id="wayStat03"></span><span class="way-go">Open the record →</span></button>
         <button type="button" class="way-card" data-act="episodes"><span class="way-t">Episodes</span><span class="way-d">The full source archive, by episode or by every guest who's sat on the couch.</span><span class="way-stat" id="wayStat04"></span><span class="way-go">Browse episodes →</span></button>
         <button type="button" class="way-card" data-act="charts"><span class="way-t">The Setup</span><span class="way-d">Independent technical calls, own book, own money. Stocks, crypto, low caps.</span><span class="way-stat" id="wayStat05"></span><span class="way-go">Open the setup →</span></button>
       </div>
@@ -1508,7 +1508,7 @@ body.on-home .simple-footer{
 
   <!-- CALLS -->
   <section class="view" id="view-calls">
-    <div class="vhead"><div class="kick">Theses · the record of what they said</div><h2>Follow what was said, what changed and what happened next</h2>
+    <div class="vhead"><div class="kick">Calls · the record of what they said</div><h2>Follow what was said, what changed and what happened next</h2>
       <p>When a host stated a clear view on air, we logged the excerpt, classified the statement, and linked it to the exact second. Omissions inside a quote are marked with … <b>Most are opinions and positions, not priced trades. Only a few named a level you can score, and those are marked against a dated snapshot, not a live feed.</b></p></div>
     <div class="snapbar" id="snapbar"></div>
     <div class="filt" id="callfilt"></div><div class="count" id="callcount"></div>
@@ -1517,14 +1517,10 @@ body.on-home .simple-footer{
 
   <!-- LEARN -->
   <section class="view" id="view-learn">
-    <div class="vhead"><div class="kick">Learn</div><h2>Get what they're talking about</h2>
-      <p>Learn how a market view is built, tested and revised: real calls taken apart, and one conviction followed as it changed.</p></div>
+    <div class="vhead"><div class="kick">Academy</div><h2>Get what they're talking about</h2>
+      <p>Three calls, taken apart in full: how each one was built, what it risked, and what happened after. The complete record of every statement lives in Calls; this is the deep dive on a few.</p></div>
     <div class="sub on" id="sub-anat"><div id="anat"></div></div>
-    <div class="academy-trail">
-      <div class="vhead" style="margin-top:36px;padding-top:28px;border-top:1px solid var(--wline)"><div class="kick">How conviction changes</div><h2>One thesis, tracked as it moved</h2>
-        <p>The same discipline applied to a single conviction over time: Ansem on Bitcoin, four episodes, every change kept attached to the moment it happened.</p></div>
-      <button type="button" class="sheet-cta" data-act="calls" data-filter="BTC">Open the BTC thesis record →</button>
-    </div>
+    <button type="button" id="academyToCalls" class="sheet-cta" data-act="calls" style="margin-top:28px">Explore every call on record →</button>
     <!-- read-trail paused for later work, per Kenny 2026-08-21 -->
   </section>
 
@@ -1567,7 +1563,7 @@ body.on-home .simple-footer{
 
 <footer>
   <span>The Market Bubble Desk · built by <b>@KtheQuant</b> · Independent concept, not affiliated with Market Bubble</span>
-  <span>Indexed clips, terms and calls from episodes 1&ndash;15</span>
+  <span>Indexed clips, terms and calls from episodes 1&ndash;16</span>
 </footer>
 
 <script>
@@ -1689,14 +1685,8 @@ document.querySelectorAll('.view:not(#view-home) > .vhead').forEach(function(v){
  var a=document.createElement('a');a.className='vback';a.href='javascript:void(0)';a.textContent='\u2190 The Desk';
  a.addEventListener('click',function(){goTo('home');window.scrollTo({top:0});});
  v.insertBefore(a,v.firstChild);});
-var __SECTIONS=[["catchup","Catch up"],["learn","Learn"],["calls","Theses"],["episodes","Episodes"],["charts","The Setup"]];
+var __SECTIONS=[["catchup","Catch up"],["learn","Academy"],["calls","Calls"],["episodes","Episodes"],["charts","The Setup"]];
 // pastilles de rappel retirées : la barre persistante en haut couvre déjà ce besoin
-var __convBtn=document.querySelector('.academy-trail [data-act]');
-if(__convBtn)__convBtn.addEventListener('click',function(){
-  goTo(__convBtn.dataset.act);
-  var f=__convBtn.dataset.filter;
-  if(f){var chip=document.querySelector('#callfilt [data-t="'+f+'"]');if(chip)chip.click();}
-});
 var __readBtn=document.querySelector('.read-trail [data-act="read"]');
 if(__readBtn)__readBtn.addEventListener('click',function(){goTo('charts');});
 var __readPrev=document.getElementById('readPreview');
@@ -1873,16 +1863,16 @@ document.querySelector(".tabs").addEventListener("click",e=>{
 
 /* ===== HOME ===== */
 const DESK={
- overview:{label:"Market Bubble · The Desk",h:"One conversation.<br>Four useful layers.",body:"Catch up. Learn. Theses. Episodes. The Setup. Five ways in, every one returns to the original moment.",
-   index:[["01","TODAY",DISP.length+" editions"],["02","LEARN",ANAT.length+" studies"],["03","THESES",CALLS.length+" statements"],["04","EPISODES",(new Set(INDEX.filter(function(x){return typeof x.ep==="number";}).map(function(x){return x.ep;})).size)+" on record"]]},
+ overview:{label:"Market Bubble · The Desk",h:"One conversation.<br>Five useful layers.",body:"Catch up. Academy. Calls. Episodes. The Setup. Five ways in, every one returns to the original moment.",
+   index:[["01","TODAY",DISP.length+" editions"],["02","ACADEMY",ANAT.length+" studies"],["03","CALLS",CALLS.length+" statements"],["04","EPISODES",(new Set(INDEX.filter(function(x){return typeof x.ep==="number";}).map(function(x){return x.ep;})).size)+" on record"]]},
  today:{label:"01 · Catch up",h:"Episode 16",sub:"Live with Austin Federa, Se Yong Park, orangie",body:"Three hours watched. Five minutes to understand.",meta:"19 indexed moments",source:"Episode 16 · 19 indexed moments",track:["Moment","Context","Meaning","Source"],cta:["Read indexed edition · 5 min","catchup"]},
  tape:{label:"04 · Episodes",h:"The source tape.<br>Every second kept.",body:"Browse every conversation, then open any indexed moment at the exact second it was said.",meta:INDEX.length+" indexed moments",source:__eps.length+" episodes · timestamped source clips",cta:["Browse all episodes","episodes"]},
- academy:{label:"02 · Learn",h:"Learn through the conversation",sub:"Simple · Understand · Go deeper",body:"Learn how a market view is built, tested and revised.",meta:ANAT.length+" call studies · 1 evolving thesis",source:"Episode 05 · 00:12:14",sourceLink:"https://youtu.be/liVvayvxoRU?t=734",cta:["Start learning","learn:anat"]},
+ academy:{label:"02 · Academy",h:"Learn through the conversation",sub:"Simple · Understand · Go deeper",body:"Learn how a market view is built, tested and revised.",meta:ANAT.length+" source-linked studies",source:"Episode 05 · 00:12:14",sourceLink:"https://youtu.be/liVvayvxoRU?t=734",cta:["Start learning","learn:anat"]},
  
- calls:{label:"03 · Theses",h:"One thesis.<br>Every change.",sub:"Every view kept in its original context.",body:"First statement, update, invalidation and outcome, preserved without rewriting the past.",meta:CALLS.length+" statements on record",source:CALLS.length+" statements · exact timestamps",track:["First stated","Changed","Outcome","Source"],cta:["Explore theses","calls"]},
+ calls:{label:"03 · Calls",h:"One thesis.<br>Every change.",sub:"Every view kept in its original context.",body:"First statement, update, invalidation and outcome, preserved without rewriting the past.",meta:CALLS.length+" statements on record",source:CALLS.length+" statements · exact timestamps",track:["First stated","Changed","Outcome","Source"],cta:["Open the record","calls"]},
  read:{label:"Independent analysis",h:"The Read by @KtheQuant",body:"Levels, wallet activity and dated analysis around the assets discussed on the show. Clearly separated from Market Bubble’s own views.",meta:"Independent layer · dated methodology",source:"Analysis · evidence and methodology",track:["Signal","Evidence","Read","Date"],cta:["Follow The Read","read"]}
 };
-const DIVIDERS=[["today","TODAY","Know what mattered"],["academy","LEARN","Understand the market"],["calls","THESES","Follow what changed"],["tape","EPISODES","Verify at source"]];
+const DIVIDERS=[["today","TODAY","Know what mattered"],["academy","ACADEMY","Understand the market"],["calls","CALLS","Follow what changed"],["tape","EPISODES","Verify at source"]];
 
 function sheetHTML(k){var d=DESK[k];
  const folio=`<div class="sheet-folio"><span>Market Bubble · The Desk</span><span>${(window.__FEAT&&__FEAT.issue)||"Issue 016 · 20 Aug 2026"}</span></div>`;
@@ -2023,6 +2013,7 @@ document.querySelectorAll('#view-home [data-act]:not(.sheet-cta):not(.te-open)')
     if(f){var chip=document.querySelector('#callfilt [data-t="'+f+'"]');if(chip)chip.click();}
   });
 });
+var __a2c=document.getElementById('academyToCalls');if(__a2c)__a2c.addEventListener('click',function(){goTo('calls');});
 
 /* Learn preview: progressive depth without leaving the landing */
 var depthContent={
