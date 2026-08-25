@@ -340,8 +340,15 @@ body.on-home .tab.dupe{display:none;}
 .calls-grid{display:grid;gap:12px;}
 .calls-heading{font-family:"Playfair Display";font-size:19px;font-weight:700;color:var(--ink1);margin:34px 0 16px;padding-top:24px;border-top:1px solid var(--wline);}
 .calls-heading b{color:var(--brass);font-weight:700;}
-.cw-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap;}
+.cw-head{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
+.cw-count{margin-left:auto;text-align:right;}
 .cw-count{font-family:"JetBrains Mono";font-size:12px;color:var(--ink3);}
+.cw-ctx-1 b{color:var(--ink1);}
+.cw-ctx-2{margin-top:4px;display:flex;align-items:center;gap:10px;justify-content:flex-end;}
+.cw-ctx-2 b{color:var(--brass);}
+#cwCompareBtn{appearance:none;border:1px solid var(--wline);background:transparent;color:var(--ink2);font-family:"JetBrains Mono";font-size:11px;padding:4px 10px;border-radius:12px;cursor:pointer;}
+#cwCompareBtn:hover{border-color:var(--brassL);color:var(--ink1);}
+@media(max-width:640px){.cw-count{margin-left:0;text-align:left;width:100%;}.cw-ctx-2{justify-content:flex-start;flex-wrap:wrap;}}
 .cw-count b{color:var(--ink1);}
 .cw-current{background:linear-gradient(160deg,var(--paper2) 0%,var(--card) 100%);border:1px solid var(--wline);border-radius:16px;padding:30px 32px;margin-bottom:22px;}
 .cw-current.up{border-color:rgba(74,180,120,.35);}
@@ -366,14 +373,19 @@ body.on-home .tab.dupe{display:none;}
 .cw-foot a:hover{text-decoration:underline;}
 .cw-tl-head{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px;}
 .cw-tl-empty{color:var(--ink3);font-style:italic;font-size:13.5px;margin-bottom:22px;}
-.cw-tl-strip{display:flex;align-items:center;gap:6px;overflow-x:auto;padding-bottom:8px;margin-bottom:18px;}
+.cw-tl-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:18px;}
+.cw-tl-arrow{display:none;}
+@media(max-width:900px){
+  .cw-tl-strip{display:flex;align-items:center;gap:6px;overflow-x:auto;padding-bottom:8px;}
+  .cw-tl-arrow{display:inline;color:var(--wline2);flex-shrink:0;font-size:13px;}
+  .cw-tl-node{flex-shrink:0;}
+}
 .cw-tl-node{appearance:none;border:1px solid var(--wline);background:var(--card);border-radius:10px;padding:9px 13px;cursor:pointer;flex-shrink:0;text-align:left;font-family:inherit;transition:border-color .18s,background .18s;}
 .cw-tl-node:hover{border-color:var(--brassL);}
 .cw-tl-node.active{border-color:var(--brass);background:var(--brasstint);}
 .cw-tl-node time{display:block;font-family:"JetBrains Mono";font-size:10px;color:var(--ink3);margin-bottom:3px;}
 .cw-tl-node b{font-size:12.5px;color:var(--ink1);font-weight:600;white-space:nowrap;display:block;}
 .cw-tl-node i{font-style:normal;display:block;font-size:9.5px;color:var(--ink3);margin-top:2px;letter-spacing:.02em;white-space:nowrap;}
-.cw-tl-arrow{color:var(--wline2);flex-shrink:0;font-size:13px;}
 #cwMomentDetail{animation:cwfade .2s ease;}
 @keyframes cwfade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
 .cw-moment{background:var(--card);border:1px solid var(--wline);border-radius:12px;padding:20px 22px;}
@@ -392,10 +404,22 @@ body.on-home .tab.dupe{display:none;}
 .cw-changed p{font-size:13px;color:var(--ink2);}
 .cw-moment-src:hover{text-decoration:underline;}
 .cw-others-lab{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px;}
-.cw-others-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;}
-.cw-other-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:20px;border:1px solid var(--wline);font-size:12.5px;color:var(--ink2);text-decoration:none;}
-.cw-other-chip b{color:var(--ink1);}
-.cw-other-chip:hover{border-color:var(--brassL);}
+.cw-others-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-bottom:26px;}
+.cw-other-card{appearance:none;text-align:left;background:var(--card);border:1px solid var(--wline);border-radius:12px;padding:14px 16px;cursor:pointer;display:flex;flex-direction:column;gap:6px;font-family:inherit;transition:border-color .18s;}
+.cw-other-card:hover{border-color:var(--brassL);}
+.cw-other-name{font-family:"Playfair Display";font-size:16px;color:var(--ink1);font-weight:700;}
+.cw-other-read{font-size:12px;color:var(--ink2);display:block;}
+.cw-other-read u{text-decoration:none;font-family:"JetBrains Mono";font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:1px;}
+.cw-other-go{font-family:"JetBrains Mono";font-size:11px;color:var(--brass);font-weight:600;margin-top:4px;}
+.cw-cmp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+.cw-cmp-card{background:var(--card);border:1px solid var(--wline);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;}
+.cw-cmp-who{font-family:"Playfair Display";font-weight:800;font-size:17px;color:var(--ink1);}
+.cw-cmp-who.up{color:#7fcf9e;}.cw-cmp-who.down{color:#e08a8a;}
+.cw-cmp-line u{text-decoration:none;font-family:"JetBrains Mono";font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:2px;}
+.cw-cmp-line span{font-size:13px;color:var(--ink2);}
+.cw-cmp-line i{font-style:normal;color:var(--ink3);}
+.cw-cmp-open{appearance:none;align-self:flex-start;margin-top:6px;border:1px solid var(--wline);background:transparent;color:var(--brass);font-family:"JetBrains Mono";font-size:11px;font-weight:600;padding:6px 12px;border-radius:14px;cursor:pointer;}
+.cw-cmp-open:hover{border-color:var(--brassL);}
 .cw-toggle-all{width:100%;appearance:none;border:1px solid var(--wline);background:var(--card);color:var(--ink2);font-family:"JetBrains Mono";font-size:12.5px;letter-spacing:.02em;padding:14px 18px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:border-color .18s,color .18s;}
 .cw-toggle-all:hover{border-color:var(--brassL);color:var(--ink1);}
 .cw-toggle-arrow{transition:transform .18s;}
@@ -442,6 +466,8 @@ body.on-home .tab.dupe{display:none;}
 .fd-arrow{color:var(--ink3);transition:transform .15s;flex-shrink:0;}
 .fdrop.open .fd-arrow{transform:rotate(180deg);color:var(--brass);}
 .fd-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:220px;max-width:320px;max-height:320px;overflow-y:auto;background:var(--paper2);border:1px solid var(--wline);border-radius:12px;box-shadow:0 24px 50px -20px rgba(0,0,0,.6);padding:6px;display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
+#fdSpeakerMenu{grid-template-columns:1fr;min-width:240px;max-width:280px;}
+#fdSpeakerMenu .fd-item{white-space:normal;}
 .fd-menu[hidden]{display:none;}
 .fd-item{appearance:none;text-align:left;border:0;background:transparent;color:var(--ink2);font-size:13px;padding:8px 10px;border-radius:7px;cursor:pointer;font-family:inherit;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .fd-item:hover{background:rgba(255,255,255,.05);color:var(--ink1);}
@@ -1708,6 +1734,7 @@ body.on-home .simple-footer{
     <div class="snapbar" id="snapbar"></div>
     <div class="cw-head">
       <div class="fdrop" id="fdAsset"><button type="button" class="fd-trigger"><span class="fd-lab">Asset</span><span class="fd-val">Everything</span><svg class="fd-arrow" width="9" height="6" viewBox="0 0 9 6"><path d="M1 1L4.5 5L8 1" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></button><div class="fd-menu" id="fdAssetMenu" hidden></div></div>
+      <div class="fdrop" id="fdSpeaker"><button type="button" class="fd-trigger"><span class="fd-lab">Speaker</span><span class="fd-val">Everyone</span><svg class="fd-arrow" width="9" height="6" viewBox="0 0 9 6"><path d="M1 1L4.5 5L8 1" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></button><div class="fd-menu" id="fdSpeakerMenu" hidden></div></div>
       <div class="cw-count" id="cwCount"></div>
     </div>
     <div id="cwCurrent"></div>
@@ -1717,7 +1744,6 @@ body.on-home .simple-footer{
     <div id="cwAllWrap" hidden>
       <div class="fd-row">
         <div class="fdrop" id="fdType"><button type="button" class="fd-trigger"><span class="fd-lab">Type</span><span class="fd-val">Everything</span><svg class="fd-arrow" width="9" height="6" viewBox="0 0 9 6"><path d="M1 1L4.5 5L8 1" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></button><div class="fd-menu" id="fdTypeMenu" hidden></div></div>
-        <div class="fdrop" id="fdSpeaker"><button type="button" class="fd-trigger"><span class="fd-lab">Speaker</span><span class="fd-val">Everyone</span><svg class="fd-arrow" width="9" height="6" viewBox="0 0 9 6"><path d="M1 1L4.5 5L8 1" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></button><div class="fd-menu" id="fdSpeakerMenu" hidden></div></div>
       </div>
       <div class="count" id="callcount"></div>
       <div class="calls-heading" id="callsHeading"></div>
@@ -2285,7 +2311,7 @@ const STYPE={
   hold:["Holding","st-pos"],flat:["No position","st-flat"],retro:["Retrospective claim","st-flat"],
   scenario:["A what-if","st-pred"],observation:["Observation","st-flat"],reported:["Reported on air","st-rep"],probability:["Probability read","st-pred"]};
 function delta(c){const now=NOW[c.tick];if(c.entry==null||now==null)return null;const pct=(now-c.entry)/c.entry*100;return{gain:c.dir==="short"?-pct:pct,now};}
-let cf="BTC",cGroup=null,cWho=null;const cticks=[...new Set(CALLS.map(c=>c.tick))];
+let cf="BTC",cGroup=null,cWho=null,cCompareMode=false;const cticks=[...new Set(CALLS.map(c=>c.tick))];
 const CGROUPS={"Priced trades":["trade"],"Predictions":["prediction","scenario","observation"],"Positions":["position","hold"],"No position":["flat"],"Probability":["probability"],"Looking back":["retro","reported"]};
 const cwhos=[...new Set(CALLS.map(c=>c.who))].sort((a,b)=>CALLS.filter(c=>c.who===b).length-CALLS.filter(c=>c.who===a).length);
 function buildDropdown(id, menuId, items, current, onPick, allLabel){
@@ -2294,6 +2320,8 @@ function buildDropdown(id, menuId, items, current, onPick, allLabel){
   var menu=document.getElementById(menuId);
   menu.innerHTML=`<button type="button" class="fd-item${!current?' active':''}" data-v="__all">${allLabel}</button>`+
     items.map(function(it){return `<button type="button" class="fd-item${current===it.v?' active':''}" data-v="${it.v}">${it.label}</button>`;}).join("");
+  var currentItem=items.find(function(it){return it.v===current;});
+  valEl.textContent=(current&&currentItem)?current:allLabel;
   function closeMenu(){menu.hidden=true;trigger.setAttribute("aria-expanded","false");document.querySelectorAll(".fdrop").forEach(function(d){d.classList.remove("open");});}
   function openMenu(){document.querySelectorAll(".fd-menu").forEach(function(m){if(m!==menu)m.hidden=true;});
     document.querySelectorAll(".fdrop").forEach(function(d){d.classList.remove("open");});
@@ -2302,14 +2330,21 @@ function buildDropdown(id, menuId, items, current, onPick, allLabel){
   menu.onclick=function(e){var b=e.target.closest(".fd-item");if(!b)return;
     var v=b.dataset.v==="__all"?null:b.dataset.v;
     onPick(v);
-    valEl.textContent=b.dataset.v==="__all"?allLabel:b.textContent;
+    valEl.textContent=b.dataset.v==="__all"?allLabel:v;
     menu.querySelectorAll(".fd-item").forEach(function(x){x.classList.toggle("active",x===b);});
     closeMenu();};
 }
 document.addEventListener("click",function(){document.querySelectorAll(".fd-menu").forEach(function(m){m.hidden=true;});document.querySelectorAll(".fdrop").forEach(function(d){d.classList.remove("open");});});
-buildDropdown("fdAsset","fdAssetMenu",cticks.map(function(t){return {v:t,label:t};}),null,function(v){cf=v;crender();},"Everything");
+function rebuildSpeakerDropdown(){
+  var onThis=cf?CALLS.filter(function(c){return c.tick===cf;}):CALLS;
+  var counts={};onThis.forEach(function(c){if(c.who&&c.who!=='UNRESOLVED')counts[c.who]=(counts[c.who]||0)+1;});
+  var whoList=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];});
+  var effective=cCompareMode?null:(cWho||whoList[0]);
+  buildDropdown("fdSpeaker","fdSpeakerMenu",whoList.map(function(w){return {v:w,label:esc(w)+' \u00b7 '+counts[w]+' statement'+(counts[w]>1?'s':'')};}),effective,function(v){cWho=v;cCompareMode=!v;crender();},"Everyone");
+}
+buildDropdown("fdAsset","fdAssetMenu",cticks.map(function(t){return {v:t,label:t};}),null,function(v){cf=v;cWho=null;cCompareMode=false;rebuildSpeakerDropdown();crender();},"Everything");
 buildDropdown("fdType","fdTypeMenu",Object.keys(CGROUPS).map(function(g){return {v:g,label:g};}),null,function(v){cGroup=v;crender();},"Everything");
-buildDropdown("fdSpeaker","fdSpeakerMenu",cwhos.map(function(w){return {v:w,label:esc(w)};}),null,function(v){cWho=v;crender();},"Everyone");
+rebuildSpeakerDropdown();
 var __cwToggle=document.getElementById("cwToggleAll");
 if(__cwToggle)__cwToggle.addEventListener("click",function(){
   var wrap=document.getElementById("cwAllWrap");var open=wrap.hidden;
@@ -2400,6 +2435,25 @@ var SHORTLABEL={
 };
 function shortLabel(c){var m=SHORTLABEL[c.stype];if(m&&m[c.dir])return m[c.dir];return c.stypeLabel||c.stype;}
 function tlLabel(c){if(c.stated){var s=c.stated;return s.charAt(0).toUpperCase()+s.slice(1);}return shortLabel(c);}
+function speakerSummary(theirsUnsorted){
+  var theirs=theirsUnsorted.slice().sort(function(a,b){return a.d<b.d?-1:1;});
+  var latestView=theirs[theirs.length-1];
+  var stanceOnes=theirs.filter(isCurrentStance);
+  var latestStance=stanceOnes.length?stanceOnes[stanceOnes.length-1]:null;
+  var sameDay=theirs.filter(function(c){return c.d===latestView.d;});
+  var prob=sameDay.find(function(c){return c.stype==='probability';});
+  var pred=sameDay.find(function(c){return c.stype==='prediction';});
+  var splitPair=(prob&&pred&&prob.dir!==pred.dir)?{prob:prob,pred:pred}:null;
+  return {latestView:latestView,latestStance:latestStance,sameEntry:latestStance===latestView,splitPair:splitPair};
+}
+function splitCondensed(prob,pred,cf){
+  var pctM=/(\d+)\s*%/.exec(prob.stated||"");var pct=pctM?pctM[1]+"%":"the market line";
+  var lvlM=/\$?(\d[\d,]*\.?\d*\s*[kKmMbB])\b/.exec((prob.stated||"")+" "+(pred.stated||""));
+  var lvl=lvlM?("$"+lvlM[1].toUpperCase().replace(/\s/g,"")):cf;
+  var dir1=prob.dir==="long"?"above":"below";
+  var dir2=pred.dir==="short"?"not to hit":"to hit";
+  return "Prices "+lvl+" odds "+dir1+" "+pct+"; still personally expects it "+dir2+".";
+}
 var cwOpenMoment=null;
 function cwMomentCard(c,pair){
   if(!c)return "";
@@ -2424,10 +2478,21 @@ function renderCurrentView(){
   if(!cf){curEl.innerHTML='';tlEl.innerHTML='';othEl.innerHTML='';if(cntEl)cntEl.innerHTML='';return;}
   var all=CALLS.filter(function(c){return c.tick===cf;});
   if(!all.length){curEl.innerHTML='';tlEl.innerHTML='';othEl.innerHTML='';if(cntEl)cntEl.innerHTML='';return;}
-  if(cntEl)cntEl.innerHTML='<b>'+all.length+'</b> source-linked statement'+(all.length!==1?'s':'');
-
   var byWho={};all.forEach(function(c){if(c.who&&c.who!=='UNRESOLVED')(byWho[c.who]=byWho[c.who]||[]).push(c);});
-  var domWho=cWho||Object.keys(byWho).sort(function(a,b){return byWho[b].length-byWho[a].length;})[0];
+  var allWhos=Object.keys(byWho).sort(function(a,b){return byWho[b].length-byWho[a].length;});
+  var domWho=cWho||allWhos[0];
+  if(cntEl)cntEl.innerHTML='<div class="cw-ctx-1">'+esc(cf)+' archive \u00b7 <b>'+all.length+'</b> statement'+(all.length!==1?'s':'')+' \u00b7 <b>'+allWhos.length+'</b> speaker'+(allWhos.length!==1?'s':'')+'</div>'+
+    (allWhos.length>1?'<div class="cw-ctx-2">Selected: <b>'+esc(cCompareMode?'Comparing all':domWho)+'</b>'+(cCompareMode?'':' \u00b7 '+byWho[domWho].length+' statement'+(byWho[domWho].length!==1?'s':''))+
+      ' <button type="button" id="cwCompareBtn">'+(cCompareMode?'Show single speaker':'Compare '+allWhos.length+' speakers')+' \u2192</button></div>':'');
+  var __cmpBtn=document.getElementById('cwCompareBtn');
+  if(__cmpBtn)__cmpBtn.onclick=function(){cCompareMode=!cCompareMode;if(cCompareMode)cWho=null;rebuildSpeakerDropdown();renderCurrentView();};
+
+  // Comparison only shows when explicitly requested: the archive should open on
+  // a real speaker's dossier, never default to a flat "Everyone" filter result.
+  if(cCompareMode&&allWhos.length>1){
+    renderComparison(cf,byWho,curEl,tlEl,othEl);
+    return;
+  }
   var mine=(byWho[domWho]||[]).slice().sort(function(a,b){return a.d<b.d?-1:(a.d>b.d?1:(a.t||0)-(b.t||0));});
   if(!mine.length){curEl.innerHTML='';tlEl.innerHTML='';othEl.innerHTML='';return;}
 
@@ -2479,13 +2544,13 @@ function renderCurrentView(){
   });
   if(sig.length<=1){
     tlEl.innerHTML='<div class="cw-tl-head">How the view changed</div><div class="cw-tl-empty">Not enough recorded history to show an evolving view.</div>';
-    othEl.innerHTML=(function(){var otherWhos=cWho?[]:Object.keys(byWho).filter(function(w){return w!==domWho&&byWho[w].some(isCurrentStance);});
-      return otherWhos.length?('<div class="cw-others-lab">Other speakers</div><div class="cw-others-row">'+otherWhos.map(function(w){
-        var wStances=byWho[w].filter(isCurrentStance).sort(function(a,b){return a.d<b.d?-1:1;});
-        var last=wStances[wStances.length-1];
-        return '<a class="cw-other-chip" href="'+yt(last.vid,last.t)+'" target="_blank" rel="noopener"><b>'+esc(w)+'</b> \u00b7 '+esc(shortLabel(last))+'</a>';
-      }).join('')+'</div>'):'';
-    })();
+    var otherWhos0=Object.keys(byWho).filter(function(w){return w!==domWho;});
+    othEl.innerHTML=otherWhos0.length?('<div class="cw-others-lab">Other recorded views on '+esc(cf)+'</div><div class="cw-others-grid">'+otherWhos0.map(function(w){
+      return otherSpeakerCard(w,byWho[w],cf);
+    }).join('')+'</div>'):'';
+    othEl.querySelectorAll('.cw-other-card').forEach(function(btn){
+      btn.addEventListener('click',function(){cWho=btn.dataset.who;cCompareMode=false;cwOpenMoment=null;rebuildSpeakerDropdown();crender();});
+    });
     return;
   }
   if(!cwOpenMoment||sig.indexOf(cwOpenMoment)<0)cwOpenMoment=sig[sig.length-1];
@@ -2500,13 +2565,38 @@ function renderCurrentView(){
     btn.addEventListener('click',function(){cwOpenMoment=sig[Number(btn.dataset.idx)];renderCurrentView();});
   });
 
-  // Other speakers, compact
-  var otherWhos=cWho?[]:Object.keys(byWho).filter(function(w){return w!==domWho&&byWho[w].some(isCurrentStance);});
-  othEl.innerHTML=otherWhos.length?('<div class="cw-others-lab">Other speakers</div><div class="cw-others-row">'+otherWhos.map(function(w){
-    var wStances=byWho[w].filter(isCurrentStance).sort(function(a,b){return a.d<b.d?-1:1;});
-    var last=wStances[wStances.length-1];
-    return '<a class="cw-other-chip" href="'+yt(last.vid,last.t)+'" target="_blank" rel="noopener"><b>'+esc(w)+'</b> \u00b7 '+esc(shortLabel(last))+'</a>';
+  // Other speakers: always offer real, switchable dossiers, not dead-end links.
+  var otherWhos=Object.keys(byWho).filter(function(w){return w!==domWho;});
+  othEl.innerHTML=otherWhos.length?('<div class="cw-others-lab">Other recorded views on '+esc(cf)+'</div><div class="cw-others-grid">'+otherWhos.map(function(w){
+    return otherSpeakerCard(w,byWho[w],cf);
   }).join('')+'</div>'):'';
+  othEl.querySelectorAll('.cw-other-card').forEach(function(btn){
+    btn.addEventListener('click',function(){cWho=btn.dataset.who;cCompareMode=false;cwOpenMoment=null;rebuildSpeakerDropdown();crender();});
+  });
+}
+function renderComparison(cf,byWho,curEl,tlEl,othEl){
+  var whos=Object.keys(byWho).sort(function(a,b){return byWho[b].length-byWho[a].length;});
+  var cards=whos.map(function(w){
+    var s=speakerSummary(byWho[w]);
+    var viewLine=s.splitPair
+      ? '<div class="cw-cmp-line"><u>Probability + forecast \u00b7 '+dlong(s.latestView.d)+'</u><span>'+esc(splitCondensed(s.splitPair.prob,s.splitPair.pred,cf))+'</span></div>'
+      : '<div class="cw-cmp-line"><u>Latest recorded view</u><span>'+esc(shortLabel(s.latestView))+(s.latestView.stated?' \u2014 '+esc(s.latestView.stated):'')+' <i>'+dlong(s.latestView.d)+'</i></span></div>';
+    var stanceLine=(s.latestStance&&!s.sameEntry)?('<div class="cw-cmp-line"><u>Last disclosed stance</u><span>'+esc(shortLabel(s.latestStance))+' <i>'+dlong(s.latestStance.d)+'</i></span></div>'):'';
+    return '<div class="cw-cmp-card"><div class="cw-cmp-who '+(DIRCOLOR[s.latestView.dir]||'')+'">'+esc(w)+'</div>'+viewLine+stanceLine+'<button type="button" class="cw-cmp-open" data-who="'+esc(w)+'">Open record \u2192</button></div>';
+  }).join('');
+  curEl.innerHTML='<div class="cw-current cmp"><div class="cw-who">Everyone on '+esc(cf)+'<span class="cw-sub">Comparing '+whos.length+' speakers</span></div><div class="cw-cmp-grid">'+cards+'</div></div>';
+  curEl.querySelectorAll('.cw-cmp-open').forEach(function(btn){
+    btn.addEventListener('click',function(){cWho=btn.dataset.who;cCompareMode=false;cwOpenMoment=null;rebuildSpeakerDropdown();renderCurrentView();});
+  });
+  tlEl.innerHTML='';othEl.innerHTML='';
+}
+function otherSpeakerCard(w,theirs,cf){
+  var s=speakerSummary(theirs);
+  var viewLine=s.splitPair
+    ? '<span class="cw-other-read"><u>Probability + forecast</u> '+esc(splitCondensed(s.splitPair.prob,s.splitPair.pred,cf))+' \u00b7 '+dlong(s.latestView.d)+'</span>'
+    : '<span class="cw-other-read"><u>Latest view</u> '+esc(shortLabel(s.latestView))+' \u00b7 '+dlong(s.latestView.d)+'</span>';
+  var stanceLine=(s.latestStance&&!s.sameEntry)?('<span class="cw-other-read"><u>Last stance</u> '+esc(shortLabel(s.latestStance))+' \u00b7 '+dlong(s.latestStance.d)+'</span>'):'';
+  return '<button type="button" class="cw-other-card" data-who="'+esc(w)+'"><b class="cw-other-name">'+esc(w)+'</b>'+viewLine+stanceLine+'<span class="cw-other-go">View record \u2192</span></button>';
 }
 function crender(){const res=CALLS.filter(c=>(!cGroup||CGROUPS[cGroup].includes(c.stype))&&(!cf||c.tick===cf)&&(!cWho||c.who===cWho)).sort(function(a,b){return a.d<b.d?1:(a.d>b.d?-1:(b.t||0)-(a.t||0));});
   document.getElementById("callcount").innerHTML=`<b>${res.length}</b> statement${res.length!==1?"s":""}${cf?` on ${cf}`:""}`;
@@ -2534,8 +2624,7 @@ document.getElementById("calls").innerHTML=res.map(c=>{const bet=betLabel(c);con
       <q>${esc(c.q)}</q><div class="ctx">${esc(c.ctx)}</div>
       `+retroHTML+`
       <div class="status">${level}<a class="watch" href="${yt(c.vid,c.t)}" target="_blank" rel="noopener" aria-label="Watch ${esc(c.who)} say this about ${c.tick}, ${episodeLabel}">Watch ↗</a></div></div></div>`;}).join("");
-  const graded=res.filter(c=>delta(c)).length;
-  document.getElementById("snapbar").innerHTML=`<b>${PRICES_AS_OF}</b>snapshot · ${graded}/${res.length} priced`;
+  document.getElementById("snapbar").innerHTML=`Archive snapshot \u00b7 <b>${PRICES_AS_OF}</b>`;
   var __toggleLab=document.getElementById("cwToggleLabel");if(__toggleLab)__toggleLab.textContent="View all "+res.length+" statement"+(res.length!==1?"s":"")+" on record";}
 document.getElementById("calls").addEventListener("click",function(e){
   if(e.target.closest("a"))return;
