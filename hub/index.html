@@ -1521,6 +1521,110 @@ body.on-home .simple-footer{
 .dossier-chip b{color:var(--ink1);}
 .dossier-chip.up{border-color:rgba(74,180,120,.35);}
 .dossier-chip.down{border-color:rgba(217,90,90,.35);}
+/* ===== FINAL BOOK REFINEMENT · clearer, larger, more tactile =====
+   Purely visual: the content, navigation and data model remain untouched. */
+#view-home .ledger-shell{
+  z-index:1;
+  border-color:rgba(190,161,101,.42);
+  background:
+    linear-gradient(136deg,rgba(255,255,255,.055),transparent 20%,rgba(0,0,0,.2) 54%,rgba(255,255,255,.025) 82%),
+    linear-gradient(145deg,#292921,#191a17 61%,#24231d);
+  box-shadow:0 48px 100px -38px rgba(0,0,0,.96),0 18px 34px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.07),inset 0 0 0 1px rgba(0,0,0,.58);
+}
+#view-home .ledger-shell::after{
+  border-color:rgba(208,178,115,.25);
+  box-shadow:inset 0 0 25px rgba(0,0,0,.48),0 0 0 1px rgba(255,255,255,.018);
+}
+#view-home .ledger-book{filter:drop-shadow(0 25px 27px rgba(0,0,0,.52));}
+#view-home .ledger-book::before{
+  left:8px;right:7px;bottom:-9px;height:17px;
+  background:
+    linear-gradient(90deg,rgba(78,65,46,.38),transparent 8%,transparent 92%,rgba(78,65,46,.34)),
+    repeating-linear-gradient(0deg,#b8af9d 0 1px,#e2dac8 1px 2px,#c9c0ae 2px 3px,#eee6d5 3px 4px);
+  box-shadow:0 9px 15px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.55);
+}
+#view-home .ledger-book::after{
+  width:34px;
+  background:linear-gradient(90deg,transparent,rgba(54,42,27,.08) 16%,rgba(39,30,19,.2) 37%,rgba(12,10,8,.28) 48%,rgba(255,255,255,.3) 53%,rgba(58,43,27,.1) 72%,transparent);
+  opacity:.95;
+}
+#view-home .ledger-index{
+  background-color:#f0eadc;
+  background-image:
+    radial-gradient(circle at 20% 8%,rgba(255,255,255,.88),transparent 31%),
+    linear-gradient(90deg,transparent 73%,rgba(79,58,31,.07) 94%,rgba(38,29,19,.12)),
+    repeating-linear-gradient(0deg,rgba(65,54,38,.011) 0 1px,transparent 1px 4px);
+  border-radius:10px 1px 5px 8px / 16px 1px 10px 18px;
+  box-shadow:
+    inset -29px 0 36px -31px rgba(42,31,18,.76),
+    inset 3px 0 5px rgba(255,255,255,.5),
+    inset 0 8px 11px -12px rgba(255,255,255,.92),
+    inset 0 -10px 14px -14px rgba(70,49,24,.55);
+}
+#view-home .sheet{
+  background-color:#f5efe2;
+  background-image:
+    radial-gradient(circle at 82% 9%,rgba(255,255,255,.92),transparent 34%),
+    linear-gradient(90deg,rgba(50,38,24,.115),rgba(255,255,255,.18) 8%,transparent 23%),
+    repeating-linear-gradient(0deg,rgba(65,54,38,.01) 0 1px,transparent 1px 4px);
+  border-radius:1px 10px 8px 5px / 1px 16px 18px 10px;
+  box-shadow:
+    inset 27px 0 38px -31px rgba(42,31,18,.78),
+    inset -4px 0 7px rgba(65,54,38,.07),
+    inset 0 8px 11px -12px rgba(255,255,255,.94),
+    inset 0 -10px 14px -14px rgba(70,49,24,.5);
+}
+#view-home .ledger-page{border-color:rgba(79,64,42,.32);}
+#view-home .ledger-brandstamp{position:relative;}
+#view-home .ledger-brandstamp svg{width:33px;height:33px;}
+#view-home .ledger-brandstamp .stamp-word{width:54px;height:37px;}
+#view-home .ledger-brandstamp::before{
+  content:"ARCHIVE DESK";position:absolute;right:0;bottom:15px;color:#8f816b;
+  font:700 5.6px "JetBrains Mono";letter-spacing:.15em;
+}
+#view-home .ledger-kicker{font-size:8.7px;}
+#view-home .ledger-kicker span{font-size:7.4px;color:#746c5f;}
+#view-home .ledger-menu button{font-size:11.5px;letter-spacing:.105em;}
+#view-home .ledger-count{font-size:8.5px;color:#514b41;}
+#view-home .sheet-folio{position:relative;font-size:7.2px;color:#686054;}
+#view-home .sheet-folio::after{
+  content:"";position:absolute;left:0;bottom:-2px;width:52px;height:1px;background:#b78a35;opacity:.75;
+}
+#view-home .sheet-label{font-size:8.6px;}
+#view-home .sheet-h{font-size:30.5px;}
+#view-home .sheet-sub{font-size:16.5px;color:#4e473c;}
+#view-home .today-beat{font-size:10px;line-height:1.34;}
+#view-home .today-beat b{font-size:8px;}
+#view-home .today-call{font-size:9px;line-height:1.42;}
+#view-home .sheet-footer{font-size:7.1px;color:#645c50;}
+#view-home .sheet-cta{font-size:8.5px;}
+#view-home .desk-right::before{
+  content:"";position:absolute;z-index:0;inset:-7% -5% -10% -8%;pointer-events:none;
+  background:radial-gradient(ellipse at 53% 45%,rgba(220,181,103,.095),transparent 45%),radial-gradient(ellipse at 50% 72%,rgba(0,0,0,.38),transparent 61%);
+  filter:blur(12px);
+}
+@media(min-width:1001px){
+  body.on-home .col{max-width:1320px;}
+  #view-home .desk{grid-template-columns:minmax(345px,.62fr) minmax(790px,1.38fr);gap:40px;}
+  #view-home .desk-right{padding-top:10px;padding-right:28px;}
+  #view-home .ledger-book,#view-home .sheet{height:520px;}
+  #view-home .ledger-index{padding:42px 44px 35px;}
+  #view-home .sheet{padding:32px 42px 27px 47px;}
+  #view-home .ledger-count{left:44px;bottom:29px;}
+}
+@media(max-width:1000px){
+  #view-home .ledger-kicker{font-size:8.2px;}
+  #view-home .ledger-menu button{font-size:11px;}
+}
+@media(max-width:620px){
+  #view-home .ledger-brandstamp svg{width:27px;height:27px;}
+  #view-home .ledger-brandstamp .stamp-word{width:45px;height:31px;}
+  #view-home .ledger-brandstamp::before{display:none;}
+  #view-home .sheet-h{font-size:25px;}
+  #view-home .sheet-sub{font-size:16px;}
+  #view-home .today-beat{font-size:10px;}
+  #view-home .desk-right::before{inset:32% -10% -4%;filter:blur(18px);}
+}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://marketbubbleacademy.netlify.app/">
